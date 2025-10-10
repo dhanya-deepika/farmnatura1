@@ -177,25 +177,19 @@ const AboutSection: React.FC = () => {
             className="flex flex-col md:flex-row items-center md:justify-between mx-auto w-full relative"
           >
             {/* Left - Text */}
-            <div className="w-full md:w-[60%] z-10 px-20 md:px-20 -space-y-[20px] mt-12 flex flex-col md:items-start items-center">
+            <div className="w-full md:w-[60%] z-10 px-20 md:px-20 lg:mt-10 -space-y-[20px] mt-12 flex flex-col md:items-start items-center">
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#404040]"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold  text-[#404040]"
                 style={{ fontFamily: "Jost", fontWeight: 600 }}
               >
                 Founder’s Vision
               </h2>
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl mt-2 md:mt-1 lg:mt-0 font-bold text-[#404040] flex items-center"
+                className="text-3xl md:text-4xl lg:text-5xl mt-2 md:mt-1 lg:mt-5 font-bold text-[#404040] flex items-center"
                 style={{ fontFamily: "Jost", fontWeight: 600 }}
               >
                 Farming
-                <Image
-                  src="/images/about/leave.svg"
-                  alt="Leaf Icon"
-                  width={90}
-                  height={71}
-                  className="w-[60px] md:w-[70px] lg:w-[90px]"
-                />
+                
               </h2>
               <p
                 className="mt-9 w-full text-black text-sm lg:text-md xl:text-lg 2xl:text-xl"
@@ -269,14 +263,6 @@ const AboutSection: React.FC = () => {
                   Development
                 </span>
 
-                {/* Leaf Image */}
-                <Image
-                  className="fade-in ml-[75%] md:ml-[85%] lg:ml-[78%] xl:ml-[69%] -mt-18 lg:mt-[-17%] xl:mt-[-12%]"
-                  src="/images/about/leave.svg"
-                  alt="leave-img"
-                  width={70}
-                  height={55}
-                />
 
                 {/* Paragraph */}
                 <p
