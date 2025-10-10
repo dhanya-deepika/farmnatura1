@@ -1,33 +1,30 @@
-'use client';
+"use client";
 
 /* eslint-disable @next/next/no-img-element */
 
 import { useState, useLayoutEffect, useRef } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import image from "../Assests/SVG/image.svg";
+
 import MoveInSection from "./project-highlights/MoveInSection";
 import FarmNaturaFooter from "./project-highlights/FarmNaturaFooter";
-import image from "../Assests/SVG/image.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type MediaItem = string | { type: 'video'; url: string };
+type VideoItem = { url: string };
 
-const youtubeVideos: MediaItem[] = [
-  { type: 'video', url: 'https://www.youtube.com/embed/C_XpxL-KpOs' },
-  { type: 'video', url: 'https://www.youtube.com/embed/owtXLPUAH9g?si=dcX1JERLby_0U6ef' },
-  { type: 'video', url: 'https://www.youtube.com/embed/mgT9ySCyooc?si=YoW1l3o0qcEsLqGV' },
-  { type: 'video', url: 'https://www.youtube.com/embed/tDs5icKaxQQ?si=Votc8bvBv-ldvkHg' },
-  { type: 'video', url: 'https://www.youtube.com/embed/BY2d9W9o3t8?si=vA8i0K32VB-KX1IB' },
-  { type: 'video', url: 'https://www.youtube.com/embed/N7pTLiM0Zzo?si=NF4YGnKf_B-MB0YG' },
+const youtubeVideos: string[] = [
+  "https://www.youtube.com/embed/C_XpxL-KpOs",
+  "https://www.youtube.com/embed/owtXLPUAH9g?si=dcX1JERLby_0U6ef",
+  "https://www.youtube.com/embed/mgT9ySCyooc?si=YoW1l3o0qcEsLqGV",
+  "https://www.youtube.com/embed/tDs5icKaxQQ?si=Votc8bvBv-ldvkHg",
+  "https://www.youtube.com/embed/BY2d9W9o3t8?si=vA8i0K32VB-KX1IB",
+  "https://www.youtube.com/embed/N7pTLiM0Zzo?si=NF4YGnKf_B-MB0YG",
 ];
 
-const images: string[] = [
-  "/images/gallery/img1.svg",
-  "/images/gallery/img2.svg",
-  "/images/gallery/img3.svg",
-  "/images/gallery/img4.svg",
-  "/images/gallery/img5.svg",
+const imageSet: string[] = [
   "/images/gallery/fnsi1.jpeg",
   "/images/gallery/fnsi2.jpeg",
   "/images/gallery/fnsi3.jpeg",
@@ -37,7 +34,7 @@ const images: string[] = [
   "/images/gallery/fnsi8.jpeg",
   "/images/gallery/fnsi9.jpeg",
   "/images/gallery/fnsi10.jpeg",
-  "/images/gallery/fnsi11.jpg",
+  "/images/gallery/fnsi11.jpeg",
   "/images/gallery/fnsi12.jpg",
   "/images/gallery/fnsi13.jpg",
   "/images/gallery/fnsi14.jpg",
@@ -51,9 +48,17 @@ const images: string[] = [
 ];
 
 const Gallery = () => {
-  const [showVideos, setShowVideos] = useState(true);
+  const [activeTab, setActiveTab] = useState<"photos" | "videos">("photos");
+  const [showAll, setShowAll] = useState(false);
   const titleRef = useRef<HTMLDivElement | null>(null);
   const galleryRef = useRef<HTMLDivElement | null>(null);
+
+  const isPhotosTab = activeTab === "photos";
+  const data: (string | VideoItem)[] = isPhotosTab
+    ? imageSet
+    : youtubeVideos.map((url) => ({ url }));
+
+  const visibleData = showAll ? data : data.slice(0, 6);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -76,50 +81,21 @@ const Gallery = () => {
       }
 
       if (galleryRef.current) {
-        gsap.fromTo(
-          galleryRef.current,
-          { opacity: 0, y: 30 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: galleryRef.current,
-              start: "top 75%",
-              toggleActions: "play none none none",
-            },
-          }
+        const cells = Array.from(
+          galleryRef.current.querySelectorAll(".gallery-cell")
         );
-
-        const cells = Array.from(galleryRef.current.children);
-        if (cells.length) {
-          gsap.fromTo(
-            cells,
-            { opacity: 0, y: 20, scale: 0.98 },
-            { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.05, ease: "power2.out" }
-          );
-        }
+        gsap.fromTo(
+          cells,
+          { opacity: 0, y: 20, scale: 0.98 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.05, ease: "power2.out" }
+        );
       }
     }, galleryRef);
 
     setTimeout(() => ScrollTrigger.refresh(), 100);
 
     return () => ctx.revert();
-  }, [showVideos]);
-
-  const triggerPopUpAnimation = () => {
-    if (galleryRef.current) {
-      const cells = Array.from(galleryRef.current.children);
-      gsap.fromTo(
-        cells,
-        { opacity: 0, scale: 0.98 },
-        { opacity: 1, scale: 1, duration: 0.5, stagger: 0.05, ease: "power3.out" }
-      );
-    }
-  };
-
-  const mediaItems: MediaItem[] = showVideos ? youtubeVideos : images;
+  }, [visibleData]);
 
   return (
     <div className="bg-[#FFFDF2] min-h-screen">
@@ -136,61 +112,87 @@ const Gallery = () => {
             Gallery
           </h1>
         </div>
-        <img src={image.src} alt="Farm Natura Background" className="w-full h-full object-cover" />
+        <Image src={image} alt="Farm Natura Background" fill className="object-cover" />
       </div>
 
-      {/* Gallery */}
-      <div ref={galleryRef} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 px-2 md:px-6 mt-10">
-        {mediaItems.map((item, idx) => (
-          <div key={idx} className="gallery-cell w-full aspect-video overflow-hidden rounded-lg">
-            {typeof item === "string" ? (
-              <img
-                src={item}
-                alt={`Gallery ${idx + 1}`}
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-              />
-            ) : (
-              <iframe
-                src={item.url}
-                title={`Video ${idx + 1}`}
-                className="w-full h-full object-cover rounded-lg"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            )}
-          </div>
-        ))}
-      </div>
+      {/* Tabs */}
+      <div className="max-w-6xl mx-auto mt-10 text-center">
+        <div className="inline-flex bg-[#f9f9f9] border border-gray-300 rounded-full overflow-hidden mb-8">
+          <button
+            onClick={() => {
+              setActiveTab("photos");
+              setShowAll(false);
+            }}
+            className={`px-5 py-1.5 text-sm font-medium transition ${
+              isPhotosTab
+                ? "bg-[#2f3e46] text-white"
+                : "text-[#2f3e46] hover:bg-gray-200"
+            }`}
+          >
+            PHOTOS
+          </button>
+          <button
+            onClick={() => {
+              setActiveTab("videos");
+              setShowAll(false);
+            }}
+            className={`px-5 py-1.5 text-sm font-medium transition ${
+              !isPhotosTab
+                ? "bg-[#2f3e46] text-white"
+                : "text-[#2f3e46] hover:bg-gray-200"
+            }`}
+          >
+            VIDEOS
+          </button>
+        </div>
 
-      {/* Navigation */}
-      <div className="flex justify-center items-center gap-20 mt-10 lg:mb-20">
-        <button
-          onClick={() => { setShowVideos(true); triggerPopUpAnimation(); }}
-          disabled={showVideos}
-          className={`flex flex-col items-center transition-transform ${showVideos ? "opacity-50 cursor-not-allowed" : "hover:scale-110"}`}
+        {/* Grid */}
+        <div
+          ref={galleryRef}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-2 sm:px-4"
         >
-          <div className="w-16 h-16 border-2 border-green-700 rounded-full flex items-center justify-center relative">
-            <span className="absolute w-12 h-12 border-l-2 border-t-2 border-green-700 rounded-full rotate-[-45deg]"></span>
-            <span className="text-green-700 text-xl">&#8592;</span>
-          </div>
-          <span className="text-gray-700 mt-2">Prev</span>
-        </button>
+          {visibleData.map((item, idx) => (
+            <div
+              key={idx}
+              className="rounded-xl overflow-hidden bg-white shadow gallery-cell"
+            >
+              {isPhotosTab ? (
+                <img
+                  src={item as string}
+                  alt={`Gallery ${idx + 1}`}
+                  className="w-full h-[200px] sm:h-[220px] md:h-[240px] object-cover transition-transform duration-300 hover:scale-105"
+                />
+              ) : (
+                <iframe
+                  src={(item as VideoItem).url}
+                  title={`Video ${idx + 1}`}
+                  className="w-full h-[200px] sm:h-[220px] md:h-[240px] object-cover rounded-lg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              )}
+            </div>
+          ))}
+        </div>
 
-        <button
-          onClick={() => { setShowVideos(false); triggerPopUpAnimation(); }}
-          disabled={!showVideos}
-          className={`flex flex-col items-center transition-transform ${!showVideos ? "opacity-50 cursor-not-allowed" : "hover:scale-110"}`}
-        >
-          <div className="w-16 h-16 border-2 border-green-700 rounded-full flex items-center justify-center relative">
-            <span className="absolute w-12 h-12 border-r-2 border-b-2 border-green-700 rounded-full rotate-[45deg]"></span>
-            <span className="text-green-700 text-xl">&#8594;</span>
+        {/* See All / Collapse Button */}
+        {data.length > 6 && (
+          <div className="mt-8">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-5 py-2.5 bg-[#2f3e46] text-white text-sm rounded-full hover:bg-[#1e2a2f] transition flex items-center gap-2 mx-auto"
+            >
+              {showAll ? "Collapse" : "See All"}{" "}
+              <span className="text-base">{showAll ? "↑" : "→"}</span>
+            </button>
           </div>
-          <span className="text-gray-700 mt-2">Next</span>
-        </button>
+        )}
       </div>
 
       {/* MoveIn Section */}
-      <MoveInSection bgColor="#FFFDF2" />
+      <div className="mt-10">
+        <MoveInSection bgColor="#FFFDF2" />
+      </div>
 
       {/* Footer */}
       <FarmNaturaFooter bgColor="#FFFDF2" />
