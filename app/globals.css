@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@layer base {
+  @font-face {
+    font-family: "sofia-pro-regular";
+    src: url("/fonts/Sofia-Pro-Regular-Az.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "sofia-pro-semi-bold";
+    src: url("/fonts/Sofia-Pro-Semi-Bold-Az.woff") format("woff");
+  }
+}
+
+@theme {
+  --color-primary-bg: #FFFDF2;
+  --color-primary-text: #404040;
+  --color-primary-green: #358b6c;
+  --color-primary-green-dark: #3d7b3b;
+  --color-black-41: #1c1c1c69;
+
+  --font-jost: "Jost", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-libre-caslon-display: "Libre Caslon Display", sans-serif;
+  --font-sofia-pro-regular: "sofia-pro-regular", sans-serif;
+  --font-sofia-pro-semi-bold: "sofia-pro-semi-bold", sans-serif;
+  --font-glory: "Glory", sans-serif;
+  --font-assistant: "Assistant", sans-serif;
+  --font-lato: "Lato", sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
