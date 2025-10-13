@@ -28,6 +28,7 @@ const imageSet: string[] = [
   "/images/gallery/fnsi4.jpg",
   "/images/gallery/fnsi5.jpeg",
   "/images/gallery/fnsi6.jpg",
+  "/images/gallery/fnsi7.jpeg",
   "/images/gallery/fnsi8.jpeg",
   "/images/gallery/fnsi9.jpeg",
   "/images/gallery/fnsi10.jpeg",
@@ -115,7 +116,7 @@ const Gallery = () => {
           className="object-cover"
           priority
           placeholder="blur"
-          blurDataURL="/images/placeholder.png"
+          // blurDataURL="/images/placeholder.png"
         />
       </div>
 

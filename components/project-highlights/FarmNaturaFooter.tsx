@@ -46,7 +46,9 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
       <Image
         src="/images/highlights/horizontal-img.svg"
         alt="hr-img"
-        className="w-full max-w-full mt-2"
+        width={1600}
+        height={40}
+        className="w-full h-auto mt-2"
       />
 
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 mt-16 2xl:mt-[5%]">
@@ -78,6 +80,8 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
             <Image
               src="/images/highlights/location.svg"
               alt="Location"
+              width={32}
+              height={32}
               className="w-8 h-8 md:w-10 md:h-10"
             />
             <p className="w-[90%] md:w-auto leading-snug">
@@ -88,13 +92,21 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
 
           {/* Phone */}
           <div className="flex items-center space-x-2">
-            <Image src="/images/phone.svg" alt="phone" className="w-5 h-5" />
+            <Image
+              src="/images/phone.svg"
+              alt="phone"
+              width={24}
+              height={24}
+              className="w-5 h-5"
+            />
             <p>+91 9579555666</p>
           </div>
 
           {/* Social Media Icons */}
           <div className="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-7 mt-5">
-            <span className="text-gray-600 text-sm md:text-base">Social Media</span>
+            <span className="text-gray-600 text-sm md:text-base">
+              Social Media
+            </span>
             <div className="flex space-x-4">
               {socialMediaLinks.map(({ name, icon, url }, index) => (
                 <a
@@ -107,8 +119,8 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
                   <Image
                     src={icon}
                     alt={name}
-                    width={20}
-                    height={20}
+                    width={24}
+                    height={24}
                     className="w-5 h-5 md:w-5 md:h-5"
                   />
                 </a>
@@ -122,20 +134,24 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
       <Image
         src="/images/highlights/horizontal-img2.svg"
         alt="hr-img"
-        className="w-full max-w-full mt-10"
+        width={1600}
+        height={40}
+        className="w-full h-auto mt-10"
       />
 
       {/* Footer Links & Copyright */}
       <div className="container mx-auto pt-4 flex flex-col md:flex-row items-center justify-between">
-        <div className="flex flex-wrap justify-center space-x-4 text-sm md:text-sm" style={{ fontFamily: "Lato", fontWeight: 400 }}>
-          {/* Optional footer links */}
-        </div>
-        <div className="text-gray-500 mt-4 md:mt-0 text-xs md:text-sm" style={{ fontFamily: "Assistant", fontWeight: 400 }}>
+        <div
+          className="flex flex-wrap justify-center space-x-4 text-sm md:text-sm"
+          style={{ fontFamily: "Lato", fontWeight: 400 }}
+        ></div>
+        <div
+          className="text-gray-500 mt-4 md:mt-0 text-xs md:text-sm"
+          style={{ fontFamily: "Assistant", fontWeight: 400 }}
+        >
           Copyright © 2025 Farmnatura
         </div>
       </div>
-
-      
     </footer>
   );
 };
