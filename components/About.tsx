@@ -163,7 +163,7 @@ const AboutSection: React.FC = () => {
 
         <div
           ref={textRef}
-          className="absolute left-6 sm:left-8 md:left-16 top-1/2 transform -translate-y-1/2 text-white"
+          className="absolute left-6 sm:left-8 md:left-16 top-1/2 transform -translate-y-1/2 text-white text-24"
         >
           <h1 className="text-3xl md:text-5xl font-bold">About Us</h1>
         </div>

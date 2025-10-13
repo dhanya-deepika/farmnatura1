@@ -44,9 +44,9 @@ const ProjectHighlight: React.FC = () => {
       {/* Overlay Text */}
       <div
         ref={headingRef}
-        className="absolute left-6 sm:left-8 md:left-16 top-1/2 -translate-y-1/2 text-white"
+        className="absolute left-6 sm:left-8 md:left-16 top-1/2 -translate-y-1/2 text-white text-24"
       >
-        <h2 className="text-3xl md:text-5xl font-bold">Project Highlights</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-24">Project Highlights</h2>
       </div>
     </div>
   );
