@@ -109,15 +109,14 @@ const Gallery = () => {
             Gallery
           </h1>
         </div>
-        <Image
-          src={bgImage}
-          alt="Farm Natura Background"
-          fill
-          className="object-cover"
-          priority
-          placeholder="blur"
-          // blurDataURL="/images/placeholder.png"
-        />
+<Image
+  src={bgImage}
+  alt="Farm Natura Background"
+  fill
+  className="object-cover"
+  priority
+/>
+
       </div>
 
       {/* Tabs */}
