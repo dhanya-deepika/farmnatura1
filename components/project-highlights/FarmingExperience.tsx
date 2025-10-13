@@ -69,35 +69,46 @@ const FarmingExperience: React.FC = () => {
       >
         {/* Title */}
         <div className="mb-8 lg:w-2/3 z-10 mx-auto lg:ml-0">
-          <h2
-            ref={titleRef}
-            className="text-2xl md:text-5xl lg:text-4xl xl:text-5xl font-bold text-black-600 flex items-center md:items-start text-center md:text-left"
-          >
-            THE FARM LIFE EXPERIENCE
-          </h2>
-        </div>
+  <h2
+    ref={titleRef}
+    className="text-[#404040] text-2xl md:text-5xl lg:text-4xl xl:text-5xl font-bold flex items-center md:items-start text-center md:text-left"
+    style={{
+      fontFamily: "Josefin Sans, sans-serif",
+    }}
+  >
+    THE FARM LIFE EXPERIENCE
+  </h2>
+</div>
 
-        {/* Description */}
-        <div
-          ref={descriptionRef}
-          className="mb-12 text-gray-700 lg:w-2/3 z-10 text-center lg:text-left"
-          style={{ fontSize: "16px" }}
-        >
-          <p>At Farm Natura, your land is a living, breathing space that grows with you.</p>
-          <br />
-          <p>
-            Each farmland plot is professionally maintained, naturally nurtured, and ready
-            for you to start experiencing the joys of growing your own food, building your
-            dream farmhouse, or simply escaping to nature whenever you choose.
-          </p>
-          <br />
-          <p>
-            Whether you’re here every weekend or once a month, your land stays active,
-            fertile, and toxin-free, so you can enjoy the benefits without the burden.
-          </p>
-          <br />
-          <p>It’s not just land. It’s peace of mind, rooted in nature.</p>
-        </div>
+{/* Description */}
+<div
+  ref={descriptionRef}
+  className="mb-12 lg:w-2/3 z-10 text-center lg:text-left"
+  style={{
+    fontFamily: "Josefin Sans, sans-serif",
+    fontWeight: 400,
+    fontSize: "20px",
+    lineHeight: "28px",
+    color: "#4A4A4A",
+    letterSpacing: "0%",
+  }}
+>
+  <p>At Farm Natura, your land is a living, breathing space that grows with you.</p>
+  <br />
+  <p>
+    Each farmland plot is professionally maintained, naturally nurtured, and ready
+    for you to start experiencing the joys of growing your own food, building your
+    dream farmhouse, or simply escaping to nature whenever you choose.
+  </p>
+  <br />
+  <p>
+    Whether you’re here every weekend or once a month, your land stays active,
+    fertile, and toxin-free, so you can enjoy the benefits without the burden.
+  </p>
+  <br />
+  <p>It’s not just land. It’s peace of mind, rooted in nature.</p>
+</div>
+
 
         {/* Feature Icons */}
         <div className="flex flex-col-reverse lg:flex-row lg:justify-between">
