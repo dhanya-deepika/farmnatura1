@@ -1,15 +1,12 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-
 import { useState, useLayoutEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import image from "../Assests/SVG/image.svg";
-
 import MoveInSection from "./project-highlights/MoveInSection";
 import FarmNaturaFooter from "./project-highlights/FarmNaturaFooter";
+import bgImage from "../Assests/SVG/image.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,14 +90,13 @@ const Gallery = () => {
     }, galleryRef);
 
     setTimeout(() => ScrollTrigger.refresh(), 100);
-
     return () => ctx.revert();
   }, [visibleData]);
 
   return (
-    <div className="bg-[#FFFDF2] min-h-screen">
+    <div className="bg-[#FFFDF2] min-h-screen m-0 p-0">
       {/* Hero Section */}
-      <div className="relative w-full h-[396px] md:h-[684px]">
+      <div className="relative w-full h-[396px] md:h-[684px] m-0 p-0">
         <div
           ref={titleRef}
           className="absolute z-10 top-[40%] left-6 sm:left-10 md:left-16 lg:left-40 text-white"
@@ -112,12 +108,20 @@ const Gallery = () => {
             Gallery
           </h1>
         </div>
-        <Image src={image} alt="Farm Natura Background" fill className="object-cover" />
+        <Image
+          src={bgImage}
+          alt="Farm Natura Background"
+          fill
+          className="object-cover"
+          priority
+          placeholder="blur"
+          blurDataURL="/images/placeholder.png"
+        />
       </div>
 
       {/* Tabs */}
-      <div className="max-w-6xl mx-auto mt-10 text-center">
-        <div className="inline-flex bg-[#f9f9f9] border border-gray-300 rounded-full overflow-hidden mb-8">
+      <div className="max-w-8xl mx-auto mt-12 text-center">
+        <div className="inline-flex bg-[#f9f9f9] border border-gray-300 rounded-full overflow-hidden mb-6">
           <button
             onClick={() => {
               setActiveTab("photos");
@@ -146,27 +150,67 @@ const Gallery = () => {
           </button>
         </div>
 
-        {/* Grid */}
+        {/* Gallery Grid */}
         <div
           ref={galleryRef}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-2 sm:px-4"
+          className="
+            mt-20
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            md:grid-cols-3
+            gap-x-6
+            gap-y-10
+            justify-items-center
+            px-4
+            w-full
+            max-w-[98vw]
+            mx-auto
+          "
         >
           {visibleData.map((item, idx) => (
             <div
               key={idx}
-              className="rounded-xl overflow-hidden bg-white shadow gallery-cell"
+              className="
+                gallery-cell
+                relative
+                rounded-xl
+                overflow-hidden
+                bg-white
+                shadow-md
+                hover:shadow-lg
+                transition-all
+                duration-300
+                w-full
+                max-w-[600px]
+                h-[300px]
+                sm:h-[320px]
+                md:h-[360px]
+                lg:h-[400px]
+                xl:h-[480px]
+              "
             >
               {isPhotosTab ? (
-                <img
+                <Image
                   src={item as string}
                   alt={`Gallery ${idx + 1}`}
-                  className="w-full h-[200px] sm:h-[220px] md:h-[240px] object-cover transition-transform duration-300 hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                  sizes="(max-width: 640px) 100vw,
+                         (max-width: 768px) 50vw,
+                         (max-width: 1024px) 33vw,
+                         (max-width: 1920px) 33vw,
+                         33vw"
+                  priority={idx < 6}
+                  placeholder="blur"
+                  blurDataURL="/images/placeholder.png"
                 />
               ) : (
                 <iframe
                   src={(item as VideoItem).url}
                   title={`Video ${idx + 1}`}
-                  className="w-full h-[200px] sm:h-[220px] md:h-[240px] object-cover rounded-lg"
+                  loading="lazy"
+                  className="w-full h-full object-cover rounded-lg"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 />
@@ -177,7 +221,7 @@ const Gallery = () => {
 
         {/* See All / Collapse Button */}
         {data.length > 6 && (
-          <div className="mt-8">
+          <div className="mt-6 mb-0">
             <button
               onClick={() => setShowAll(!showAll)}
               className="px-5 py-2.5 bg-[#2f3e46] text-white text-sm rounded-full hover:bg-[#1e2a2f] transition flex items-center gap-2 mx-auto"
@@ -189,12 +233,8 @@ const Gallery = () => {
         )}
       </div>
 
-      {/* MoveIn Section */}
-      <div className="mt-10">
-        <MoveInSection bgColor="#FFFDF2" />
-      </div>
-
-      {/* Footer */}
+      {/* Additional Sections */}
+      <MoveInSection bgColor="#FFFDF2" />
       <FarmNaturaFooter bgColor="#FFFDF2" />
     </div>
   );

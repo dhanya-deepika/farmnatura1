@@ -4,13 +4,16 @@ import React from "react";
 import Image from "next/image";
 
 const StickySocialIcons: React.FC = () => {
+  const iconSize = 37;
+  
+
   return (
     <div className="fixed bottom-3.5 right-2 md:right-3 flex flex-col space-y-3 z-50">
       {/* Instagram */}
       <Image
         src="/images/instagram-icon.svg"
-        width={37}
-        height={37}
+        width={iconSize}
+        height={iconSize}
         alt="instagram"
         className="w-[25px] h-[25px] md:w-[37px] md:h-[37px] cursor-pointer"
         onClick={() =>
@@ -21,8 +24,8 @@ const StickySocialIcons: React.FC = () => {
       {/* Facebook */}
       <Image
         src="/images/facebook-icon.svg"
-        width={37}
-        height={37}
+        width={iconSize}
+        height={iconSize}
         alt="facebook"
         className="w-[25px] h-[25px] md:w-[37px] md:h-[37px] cursor-pointer"
         onClick={() =>
@@ -33,8 +36,8 @@ const StickySocialIcons: React.FC = () => {
       {/* YouTube */}
       <Image
         src="/images/youtube-icon.svg"
-        width={37}
-        height={37}
+        width={iconSize}
+        height={iconSize}
         alt="youtube"
         className="w-[25px] h-[25px] md:w-[37px] md:h-[37px] cursor-pointer"
         onClick={() =>
@@ -48,8 +51,10 @@ const StickySocialIcons: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
+        <Image
           src="/images/whatsapp-icon.svg"
+          width={iconSize}
+          height={iconSize}
           alt="whatsapp"
           className="w-[25px] h-[25px] md:w-[37px] md:h-[37px] cursor-pointer"
         />
@@ -59,9 +64,9 @@ const StickySocialIcons: React.FC = () => {
       <a href="tel:919579555666">
         <Image
           src="/images/phone-icon.svg"
+          width={iconSize}
+          height={iconSize}
           alt="phone"
-          width={37}
-          height={37}
           className="w-[25px] h-[25px] md:w-[37px] md:h-[37px] cursor-pointer"
         />
       </a>

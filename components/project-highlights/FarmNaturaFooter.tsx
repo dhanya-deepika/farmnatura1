@@ -43,7 +43,7 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
       style={{ backgroundColor: bgColor }}
     >
       {/* Top horizontal image */}
-      <img
+      <Image
         src="/images/highlights/horizontal-img.svg"
         alt="hr-img"
         className="w-full max-w-full mt-2"
@@ -52,7 +52,7 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 mt-16 2xl:mt-[5%]">
         {/* Left Side */}
         <div className="flex flex-col items-center md:items-start gap-5 w-full md:w-1/2">
-          <img
+          <Image
             src="/images/highlights/logo.svg"
             alt="Farm Natura Logo"
             width={130}
@@ -75,7 +75,7 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
         >
           {/* Location */}
           <div className="flex flex-row items-center justify-center md:justify-start space-x-2 text-center md:text-left">
-            <img
+            <Image
               src="/images/highlights/location.svg"
               alt="Location"
               className="w-8 h-8 md:w-10 md:h-10"
@@ -88,7 +88,7 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
 
           {/* Phone */}
           <div className="flex items-center space-x-2">
-            <img src="/images/phone.svg" alt="phone" className="w-5 h-5" />
+            <Image src="/images/phone.svg" alt="phone" className="w-5 h-5" />
             <p>+91 9579555666</p>
           </div>
 
@@ -104,7 +104,7 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
                   rel="noopener noreferrer"
                   aria-label={name}
                 >
-                  <img
+                  <Image
                     src={icon}
                     alt={name}
                     width={20}
@@ -119,7 +119,7 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
       </div>
 
       {/* Bottom horizontal image */}
-      <img
+      <Image
         src="/images/highlights/horizontal-img2.svg"
         alt="hr-img"
         className="w-full max-w-full mt-10"
