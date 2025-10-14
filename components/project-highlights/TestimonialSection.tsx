@@ -39,9 +39,9 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ bgColor }) => {
     >
       <div className="max-w-8xl mx-auto relative pl-12">
         {/* Decorative Quote */}
-        <div className="absolute hidden md:block -top-2 left-20 md:left-80 text-6xl md:text-8xl text-gray-400 font-serif">
+        {/* <div className="absolute hidden md:block -top-2 left-20 md:left-80 text-6xl md:text-8xl text-gray-400 font-serif">
           “
-        </div>
+        </div> */}
 
         {/* Testimonial Text */}
         <div className="relative z-10">
@@ -95,24 +95,23 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ bgColor }) => {
           </div>
 
           {/* Testimonial Quote Box */}
-          <div className="relative bg-[#3D7B3B] text-white p-6 md:p-8 pt-20 md:pt-12 shadow-lg">
+          <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen  bg-[#3D7B3B] text-white p-6 md:p-8 pt-20 md:pt-12 shadow-lg">
             <div className="absolute -top-4 left-4 md:-top-8 md:left-8 w-20 h-24 md:w-48 md:h-56 z-10"></div>
 
             <p
-              className="text-sm md:text-base leading-relaxed md:pl-98"
+              className="text-sm md:text-base leading-relaxed md:pl-115"
               style={{ fontFamily: "Jost" }}
             >
               &ldquo;I couldn&apos;t have asked for a better place to call home
-              than FARM NATURA Urban One. From the moment I <br />
+              than FARM NATURA Urban One. From the moment I 
               stepped into this vibrant community, I knew I had made the right
-              choice. Everything here exceeded all my <br /> expectations,
+              choice. Everything here exceeded all my expectations,
               offering a perfect blend of comfort and elegance. What truly sets
               Farm Natura apart is the
-              <br /> sense of belonging it provides &ndash; the friendly
-              neighbours, the top-notch amenities, and the beautifully <br />
+               sense of belonging it provides &ndash; the friendly
+              neighbours, the top-notch amenities, and the beautifully 
               landscaped surroundings. Living here has been an incredible
               experience, and I can&apos;t imagine being
-              <br />
               anywhere else.&rdquo;
             </p>
           </div>

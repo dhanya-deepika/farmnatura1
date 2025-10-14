@@ -58,14 +58,14 @@ const Choose = () => {
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 md:gap-8 lg:gap-0">
   {/* Left Column Heading */}
   <div className="w-full lg:w-auto mb-6 lg:mb-0 lg:pl-8 xl:pl-12 2xl:pl-20 max-w-full lg:max-w-[500px] xl:max-w-[450px] 2xl:max-w-[550px] mx-auto lg:mx-0">
-  <h4
-    id="header-heading"
-    className="font-jost font-semibold text-primary-text leading-tight
-      text-4xl sm:text-5xl md:text-4xl lg:text-[65px] xl:text-[50px] 2xl:text-[60px]
-      text-center lg:text-left"
-  >
+<h4
+  id="header-heading"
+  className="font-jost font-semibold text-primary-text leading-tight
+    text-4xl sm:text-5xl md:text-4xl lg:text-[65px] xl:text-[50px] 2xl:text-[60px]
+    text-center lg:text-left"
+>
     Reason to <br /> Choose Us!
-  </h4>
+</h4>
 </div>
 
 
@@ -106,9 +106,13 @@ const Choose = () => {
             />
           </div>
 
-          <div className="relative lg:absolute pt-0 lg:bottom-[-40%] xl:bottom-[-35%] 2xl:bottom-[-70%] left-0 w-full lg:w-[70%] xl:w-[110%] 2xl:w-[100%] animate-slideDown"
-               id="images-content"
-          >
+ <div
+  className="relative pt-4 md:pt-6 lg:pt-8 xl:pt-10 2xl:pt-12 left-0 w-full mx-auto animate-slideDown"
+  id="images-content"
+>
+
+
+
             <p className="font-jost text-lg sm:text-xl md:text-2xl xl:text-2xl 2xl:text-[28px] text-primary-text font-semibold mt-5 mb-2 sm:mb-3 md:mb-3 ml-4 sm:ml-16 md:ml-20 text-center lg:text-left">
               KANDUKUR
             </p>
@@ -139,7 +143,7 @@ const Choose = () => {
       </div>
 
       {/* Bottom Image */}
-<div className="relative mt-[-90] sm:mt-6 md:mt-10 lg:mt-16 w-full">
+<div className="relative mt-[-10px] sm:mt-[-20px] md:mt-[-30px] lg:mt-[-40px] w-full">
   <div className="w-full overflow-hidden">
     <Image
       src="/home/choose-bottom.png"
