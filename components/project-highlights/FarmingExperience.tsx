@@ -64,7 +64,7 @@ const FarmingExperience: React.FC = () => {
     <>
       <div
         ref={containerRef}
-        className="w-full px-4 md:px-8 lg:pl-10 xl:pl-20 lg:pr-0 flex flex-col mt-15 z-10"
+        className="w-full bg-[#F5F2E6]  px-4 md:px-8 lg:pl-10 xl:pl-20 lg:pr-0 flex flex-col  z-10"
         style={{ fontFamily: "Jost" }}
       >
         {/* Title */}
@@ -74,6 +74,7 @@ const FarmingExperience: React.FC = () => {
     className="text-[#404040] text-2xl md:text-5xl lg:text-4xl xl:text-5xl font-bold flex items-center md:items-start text-center md:text-left"
     style={{
       fontFamily: "Josefin Sans, sans-serif",
+      fontSize:"67px",
     }}
   >
     THE FARM LIFE EXPERIENCE
@@ -93,20 +94,17 @@ const FarmingExperience: React.FC = () => {
     letterSpacing: "0%",
   }}
 >
-  <p>At Farm Natura, your land is a living, breathing space that grows with you.</p>
+  At Farm Natura, your land is a living, breathing space that grows with you.
   <br />
-  <p>
+  
     Each farmland plot is professionally maintained, naturally nurtured, and ready
     for you to start experiencing the joys of growing your own food, building your
     dream farmhouse, or simply escaping to nature whenever you choose.
-  </p>
   <br />
-  <p>
     Whether you’re here every weekend or once a month, your land stays active,
     fertile, and toxin-free, so you can enjoy the benefits without the burden.
-  </p>
   <br />
-  <p>It’s not just land. It’s peace of mind, rooted in nature.</p>
+  It’s not just land. It’s peace of mind, rooted in nature.
 </div>
 
 
@@ -144,11 +142,13 @@ const FarmingExperience: React.FC = () => {
               >
                 <div
                   onClick={() => handleRedirect(feature.link)}
-                  className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer"
+        className="w-[133px] h-[133px] bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition cursor-pointer"
                 >
-                  <Image src={feature.icon} alt={feature.title} width={50} height={50} />
+                  <Image src={feature.icon} alt={feature.title} width={133} height={133} />
                 </div>
-                <p className="text-sm text-center text-gray-700 max-w-[120px] break-words">
+                <p 
+        className="text-[17px] font-[400] text-center text-gray-700 max-w-[120px] break-words"
+                >
                   {feature.title}
                 </p>
               </div>
@@ -158,14 +158,19 @@ const FarmingExperience: React.FC = () => {
       </div>
 
       {/* Farm Image */}
-      <div
-        ref={farmImageRef}
-        className="w-[90%] h-96 md:h-[500px] bg-cover bg-center rounded-lg shadow-lg mx-auto mb-20 mt-0"
-        style={{
-          backgroundImage: 'url("/images/highlights/farming-exp.svg")',
-          backgroundPosition: "center",
-        }}
-      ></div>
+    <section className="bg-[#F5F2E6] ">
+  <div
+    ref={farmImageRef}
+    className="w-[90%] h-96 md:h-[500px] bg-cover bg-center rounded-lg shadow-lg mx-auto"
+    style={{
+      backgroundImage: `url("/images/highlights/farming-exp.svg")`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+    }}
+  ></div>
+</section>
+
     </>
   );
 };

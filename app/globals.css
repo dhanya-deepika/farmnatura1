@@ -54,7 +54,7 @@ body {
 }
 @media (width >= 48rem) {
     .md\:pl-8 {
-        padding-left: calc(var(--spacing) * 8);
+        padding-left: calc(var(--spacing) * 0);
         margin-top: -100px;
     }
 }
@@ -69,4 +69,69 @@ body {
         gap: calc(var(--spacing) * 0);
         margin-top: -50px;
     }
+}
+@media (width >= 64rem) {
+    .lg\:mt-\[6\%\] {
+        margin-top: 0%;
+    }
+}
+@media (width >= 48rem) {
+    .md\:w-1\/1 {
+        width: 65%;
+    }
+}
+@media (width >= 64rem) {
+    .lg\:w-64 {
+        width: calc(var(--spacing) * 100);
+    }
+}
+@media (width >= 48rem) {
+    .md\:w-3\/5 {
+        width: 60%;
+        margin: 30px;
+    }
+}
+@media (width >= 64rem) {
+    .lg\:h-\[100px\] {
+        height: 720px;
+        width: 982px;
+    }
+}
+@media (width >= 48rem) {
+    .md\:py-16 {
+        padding-block: calc(var(--spacing) * 5);
+    }
+}
+.px-6 {
+    padding-inline: calc(var(--spacing) * 22);
+}
+@media (width >= 48rem) {
+    .md\:left-16 {
+        left: calc(var(--spacing) *25);
+    }
+}
+@media (width >= 48rem) {
+    .md\:py-12 {
+        padding: calc(var(--spacing) * 25);
+    }
+}
+@media (width >= 48rem) {
+    .md\:-mt-20 {
+        margin-top: calc(var(--spacing) * -32);
+    }
+}
+@media (width >= 80rem) {
+    .xl\:pl-20 {
+        padding-left: calc(var(--spacing) * 22);
+        padding-top: calc(var(--spacing) * 20);
+    }
+}
+@media (width >= 48rem) {
+    .md\:h-64 {
+        height: calc(var(--spacing) * 75);
+        width: calc(var(--spacing) * 82);
+    }
+}
+.mt-4 {
+    margin-top: calc(var(--spacing) * 0);
 }

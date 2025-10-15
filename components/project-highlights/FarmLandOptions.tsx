@@ -109,13 +109,13 @@ const FarmLandOptions = () => {
   return (
     <section
       ref={containerRef}
-      className="relative bg-white py-12 px-6 lg:px-16"
+      className="relative bg-[#F5F2E6] py-12 px-6 lg:px-16"
     >
       {/* Header */}
       <div ref={headingRef} className="flex flex-col items-center text-center relative z-10">
         <h2
           className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold text-gray-800"
-          style={{ fontFamily: "Jost", fontWeight: 600 }}
+          style={{ fontFamily: "Jost", fontSize:"67px",fontWeight: 600 }}
         >
           Farm Land Options
         </h2>
@@ -172,7 +172,7 @@ const FarmLandOptions = () => {
 
             {/* Card Text */}
             <p
-              className="text-gray-700 text-center mt-4 px-2 sm:px-0"
+              className="text-gray-700 text-left mt-4 px-2 sm:px-0"
               style={{ fontFamily: "Sofia Pro, sans-serif", fontWeight: 400, fontSize: "19px" }}
             >
               {card.text}
@@ -181,19 +181,29 @@ const FarmLandOptions = () => {
         ))}
       </div>
 
-      {/* Bottom Image
-      <div className="w-full mt-12">
-        <div className="w-full relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]">
-          <Image
-            src="/home/choose-bottom.png"
-            alt="choose"
-            fill
-            className="object-cover w-full h-full"
-            sizes="100vw"
-            priority
-          />
-        </div>
-      </div> */}
+    <div className="relative mt-[-10px] sm:mt-[-20px] md:mt-[-30px] lg:mt-[-40px] w-full">
+      {/* Full-width overflow image */}
+<div className="relative w-screen left-1/2 right-1/2 -translate-x-1/2 mt-[-10px] sm:mt-[-20px] md:mt-[-30px] lg:mt-[-40px] overflow-hidden">
+  <Image
+    src="/home/choose-bottom.png"
+    width={2560}
+    height={800}
+    alt="choose"
+    className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] object-cover"
+    loading="lazy"
+  />
+</div>
+
+            {/* <div className="absolute right-0 bottom-[10%] sm:bottom-[15%] md:bottom-[20%] w-[25%] sm:w-[20%] md:w-[18%] lg:w-[15%] xl:w-[12%] 2xl:w-[10%]">
+              <Image
+                src="/home/choose-right.png"
+                width={400}
+                height={500}
+                alt="choose-right"
+                className="w-full h-auto object-contain"
+              />
+            </div> */}
+          </div>
 
       {/* Modal */}
       <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />

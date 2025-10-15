@@ -91,7 +91,9 @@ const CustomFarmlands = () => {
     ref={titleRef}
     className="text-[#404040] text-2xl md:text-5xl lg:text-4xl xl:text-5xl font-bold flex items-center md:items-start text-center md:text-left"
     style={{
-      fontFamily: "Josefin Sans, sans-serif",
+      fontFamily: "Jost" !,
+      fontSize:"67px",
+      lineHeight:"89px"
     }}
   >
           <span>YOUR FARMLAND.<br/> YOUR WAY.</span>
@@ -115,16 +117,21 @@ const CustomFarmlands = () => {
       fontWeight: 400,
       fontSize: "20px",
       lineHeight: "28px",
-      color: "#4A4A4A",
+      color: "#4a4a4a",
       letterSpacing: "0%",
       marginBottom: "1rem",
     }}
   >
     When you build your farmhouse at Farm Natura, you&rsquo;re creating a sanctuary
-    for your family, rooted in nature.
+    for your family, rooted in nature. <br/>
+  
+    Wake up to the sounds of birds, sip chai in your own green courtyard, grow
+    vegetables just steps from your kitchen, and spend evenings under open skies.<br/>
+    With fully maintained farmlands, chemical-free soil, and fresh air all around,
+    your farmhouse becomes your personal space of health and happiness.
   </p>
 
-  <p
+  {/* <p
     style={{
       fontFamily: "Josefin Sans, sans-serif",
       fontWeight: 400,
@@ -151,12 +158,12 @@ const CustomFarmlands = () => {
   >
     With fully maintained farmlands, chemical-free soil, and fresh air all around,
     your farmhouse becomes your personal space of health and happiness.
-  </p>
+  </p> */}
 </div>
 
 
       {/* Grid Section with Animation */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mt-7">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mt-7 px-4">
         {[
           { src: "/images/highlights/cucumber.svg", title: "" },  
           { src: "/images/highlights/greenland.svg", title: "" },
