@@ -34,3 +34,44 @@ html,
 body {
   overflow-x: hidden;
 }
+.lg\:mt-\[-40px\] {
+    @media (width >= 64rem) {
+      margin-top: -275px !important;
+    }
+  }
+
+  @media (width >= 80rem) {
+    .xl\:text-\[80px\] {
+        font-size: 80px;
+        margin-top: 0px;
+    }}
+
+    @media (width >= 80rem) {
+    .xl\:h-\[900px\] {
+        height: 900px;
+        margin-top: -165px;
+    }
+}
+@media (width >= 48rem) {
+    .md\:pl-8 {
+        padding-left: calc(var(--spacing) * 0);
+        margin-top: -70pxpx;
+    }
+}
+@media (width >= 80rem) {
+    .xl\:py-24 {
+        padding-block: calc(var(--spacing) * 24);
+    }
+}
+@media (width >= 64rem) {
+    .lg\:gap-0 {
+        gap: calc(var(--spacing) * 0);
+        margin-top: -50px;
+    }
+}
+@media (width >= 80rem) {
+    .xl\:px-10 {
+        padding-inline: calc(var(--spacing) * 10);
+        margin: 50px;
+    }
+}

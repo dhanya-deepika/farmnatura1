@@ -80,9 +80,9 @@ const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
             <Image
               src="/images/highlights/location.svg"
               alt="Location"
-              width={32}
-              height={32}
-              className="w-8 h-8 md:w-10 md:h-10"
+              width={24}
+              height={24}
+              className="w-7 h-7"
             />
             <p className="w-[90%] md:w-auto leading-snug">
               Planet Green’s Farm Natura, Planet Green, Above Hyundai Show Room

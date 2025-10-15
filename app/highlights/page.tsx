@@ -10,7 +10,27 @@ import TestimonialSection from "@/components/project-highlights/TestimonialSecti
 import WhyFarmNatura from "@/components/project-highlights/WhyFarmNatura";
 
 // ✅ Define a shared type for bgColor prop
+export const metadata = {
+ title: "Farm Natura Hyderabad | Farm Plots Near Hyderabad Airport",
+ description:
+   "Own farm plots near Hyderabad at Farm Natura. A natural farming community with quarter, half, and one-acre options in a prime Hyderabad location.",
 
+  keywords: [
+    'Natural farming community Hyderabad',
+    'Farm Natura Hyderabad location',
+    'Farm plots near Hyderabad',
+  ],
+
+  // ✅ Robots meta
+robots: "INDEX, FOLLOW, MAX-IMAGE-PREVIEW:LARGE, MAX-SNIPPET:-1, MAX-VIDEO-PREVIEW:-1",
+
+  // ✅ Canonical URL
+  alternates: {
+    canonical: 'https://www.farmnatura.in/highlights',
+  },
+
+
+};
 
 const ProjectHighlights: React.FC = () => {
   return (
