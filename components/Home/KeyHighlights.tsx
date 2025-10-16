@@ -185,7 +185,7 @@ const KeyHighlights = () => {
                     variant="outline"
                     onClick={() => setModalOpen(true)}
                   >
-                    <span className="text-primary-green text-sm sm:text-base">
+                    <span className="text-primary-green text-sm sm:text-base cursor-pointer">
                       Download Brochure
                     </span>
                   </Button>

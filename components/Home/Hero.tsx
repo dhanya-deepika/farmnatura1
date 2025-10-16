@@ -83,10 +83,9 @@ const Hero = () => {
 
         <div
           id="hero-btn"
-          className="relative z-20 flex items-center justify-center mt-8 mb-12 sm:mt-8 md:mt-10 lg:mt-12"
-        >
+          className="relative z-20 flex items-center justify-center mt-8 mb-12 sm:mt-8 md:mt-10 lg:mt-12 " >
           <Button
-            className="relative z-30 text-sm sm:text-base md:text-lg lg:text-xl px-6 py-3 sm:px-8 sm:py-4"
+            className="relative z-30 text-sm sm:text-base md:text-lg lg:text-xl px-6 py-3 sm:px-8 sm:py-4 cursor-pointer"
             onClick={() => setModalOpen(true)}
           >
             Book A Site Visit
