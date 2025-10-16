@@ -74,7 +74,7 @@ const FarmingExperience: React.FC = () => {
     className="text-[#404040] text-2xl md:text-5xl lg:text-4xl xl:text-5xl font-bold flex items-center md:items-start text-center md:text-left"
     style={{
       fontFamily: "Josefin Sans, sans-serif",
-      fontSize:"67px",
+      fontSize:"47px",
     }}
   >
     THE FARM LIFE EXPERIENCE
@@ -88,7 +88,7 @@ const FarmingExperience: React.FC = () => {
   style={{
     fontFamily: "Josefin Sans, sans-serif",
     fontWeight: 400,
-    fontSize: "20px",
+    fontSize: "18px",
     lineHeight: "28px",
     color: "#4A4A4A",
     letterSpacing: "0%",
@@ -147,7 +147,7 @@ const FarmingExperience: React.FC = () => {
                   <Image src={feature.icon} alt={feature.title} width={133} height={133} />
                 </div>
                 <p 
-        className="text-[17px] font-[400] text-center text-gray-700 max-w-[120px] break-words"
+        className="text-[15px] font-[400] text-center text-gray-700 max-w-[120px] break-words"
                 >
                   {feature.title}
                 </p>

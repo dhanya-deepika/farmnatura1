@@ -67,7 +67,7 @@ const Hero = () => {
 
         <p
           id="hero-content"
-          className="text-center mt-8 sm:mt-6 md:mt-8 lg:mt-10 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] font-sofia-pro-regular mx-auto"
+          className="text-center mt-8 sm:mt-6 md:mt-8 lg:mt-10 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[19px] 2xl:text-[24px] font-sofia-pro-regular mx-auto"
           style={{
             maxWidth: "60ch",
             display: "-webkit-box",

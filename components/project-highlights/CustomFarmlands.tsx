@@ -74,7 +74,7 @@ const CustomFarmlands = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#F5F2E6] py-10 md:py-16 px-6 md:px-16"
+      className="relative bg-[#F5F2E6] py-10 md:py-13 px-6 md:px-16"
     >
        {/* <Image
         ref={leavetreeRef}
@@ -92,8 +92,8 @@ const CustomFarmlands = () => {
     className="text-[#404040] text-2xl md:text-5xl lg:text-4xl xl:text-5xl font-bold flex items-center md:items-start text-center md:text-left"
     style={{
       fontFamily: "Jost" !,
-      fontSize:"67px",
-      lineHeight:"89px"
+      fontSize:"47px",
+      lineHeight:"69px"
     }}
   >
           <span>YOUR FARMLAND.<br/> YOUR WAY.</span>
@@ -115,7 +115,7 @@ const CustomFarmlands = () => {
     style={{
       fontFamily: "Josefin Sans, sans-serif",
       fontWeight: 400,
-      fontSize: "20px",
+      fontSize: "18px",
       lineHeight: "28px",
       color: "#4a4a4a",
       letterSpacing: "0%",

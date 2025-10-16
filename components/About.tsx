@@ -166,7 +166,7 @@ const AboutSection: React.FC = () => {
           ref={textRef}
           className="absolute left-6 sm:left-8 md:left-16 top-1/2 transform -translate-y-1/2 text-white text-24"
         >
-          <h1 className="font-bold text-[80px]">About Us</h1>
+          <h1 className="font-bold text-[50px]">About Us</h1>
         </div>
       </section>
 
@@ -178,13 +178,13 @@ const AboutSection: React.FC = () => {
             className="flex flex-col md:flex-row items-center md:justify-between mx-auto w-full relative"
           >
             {/* Left - Text */}
-            <div className="w-full md:w-[60%] z-10 px-20 md:px-20 lg:mt-10 -space-y-[20px] mt-12 flex flex-col md:items-start items-center">
+            <div className="w-full md:w-[60%] z-10 px-20 md:px-20 lg:mt-9 -space-y-[20px] mt-12 flex flex-col md:items-start items-center">
               <h2
                 className="text-3xl md:text-4xl mt-2 md:mb-0 lg:mt-5 lg:text-5xl font-bold  text-[#404040]"
                 style={{
                   fontFamily: "Jost",
-                  fontSize: "67px",
-                  lineHeight: "89px",
+                  fontSize: "47px",
+                  lineHeight: "40px",
                   fontWeight: 600
                 }}
               >
@@ -192,7 +192,7 @@ const AboutSection: React.FC = () => {
               </h2>
               <h2
                 className="text-3xl md:text-4xl lg:text-5xl mt-2 md:mb-0 lg:mt-5 font-bold text-[#404040] flex items-center"
-                style={{ fontFamily: "Jost",fontSize:"67px", fontWeight: 600 }}
+                style={{ fontFamily: "Jost",fontSize:"47px", fontWeight: 600 }}
               >
                 Farming
                 
@@ -201,7 +201,7 @@ const AboutSection: React.FC = () => {
                 className="mt-9 w-full text-black text-sm lg:text-md xl:text-lg 2xl:text-xl"
                 style={{
                   // fontFamily: "Sofia Pro"!,
-                  fontSize:"19px" !,
+                  fontSize:"16px" !,
                   fontWeight: 400,
                   lineHeight:"123.2%",
                   color:"#282828"
@@ -263,8 +263,8 @@ const AboutSection: React.FC = () => {
                 <span className="fade-in"  style={{
                   fontFamily: "Jost"!,
                   fontWeight: 600,
-                  lineHeight:"89px",
-                  fontSize: "67px",
+                  lineHeight:"60px",
+                  fontSize: "47px",
                 }}
                 >Research & <br/>
                   Development
@@ -276,7 +276,7 @@ const AboutSection: React.FC = () => {
                   className="fade-in mt-4 lg:mt-[6%] w-full sm:max-w-[700px] text-black text-sm sm:text-base 2xl:text-lg"
                  style={{
                   // fontFamily: "Sofia Pro"!,
-                  fontSize:"19px" !,
+                  fontSize:"16px" !,
                   fontWeight: 400,
                   lineHeight:"123.2%",
                   color:"#282828"
@@ -300,7 +300,7 @@ const AboutSection: React.FC = () => {
 
               {/* Download Button */}
               <a
-                className="fade-in mt-10 inline-block border border-green-700 text-green-700 px-6 py-2 rounded-lg text-lg 2xl:ml-[21%] font-semibold transition duration-300 hover:bg-green-700 hover:text-white z-1"
+                className="fade-in mt-10 inline-block border border-green-700 text-green-700 px-6 py-2 rounded-lg text-lg 2xl:ml-[21%] font-semibold transition duration-300 hover:bg-green-700 hover:text-white z-1 cursor-pointer"
                 onClick={() => setModalOpen(true)}
               >
                 Download Brochure
@@ -415,7 +415,7 @@ const AboutSection: React.FC = () => {
             <span className="text-4xl md:text-5xl font-bold z-2"
               style={{
                   fontFamily:"Jost",
-                  fontSize: "67px",
+                  fontSize: "47px",
                   color:"#404040"
                 }}
             >Vision &  Mission </span>
@@ -460,7 +460,7 @@ const AboutSection: React.FC = () => {
         <h3
           className="text-lg sm:text-xl md:text-2xl font-semibold leading-tight"
           style={{ fontFamily: "Jost" !, 
-              fontSize: "36px",
+              fontSize: "30px",
                   color:"#727272",
                   fontWeight: 500 }}
         >
@@ -470,7 +470,7 @@ const AboutSection: React.FC = () => {
         <p
           className="mt-2 text-sm sm:text-base md:text-lg"
           style={{ fontFamily: "Josefin Sans ",
-            fontSize: "20px",
+            fontSize: "18px",
                   color:"#4a4a4a", fontWeight: 400 }}
         >
           To create India’s most inspiring model of natural living where urban
@@ -490,7 +490,7 @@ const AboutSection: React.FC = () => {
         <h3
           className="text-lg sm:text-xl md:text-2xl font-semibold leading-tight"
            style={{ fontFamily: "Jost" !, 
-              fontSize: "36px",
+              fontSize: "30px",
                   color:"#727272",
                   fontWeight: 500 }}
         >
@@ -500,7 +500,7 @@ const AboutSection: React.FC = () => {
         <p
           className="mt-2 text-sm sm:text-base md:text-lg"
  style={{ fontFamily: "Josefin Sans ",
-            fontSize: "20px",
+            fontSize: "18px",
                   color:"#4a4a4a", fontWeight: 400 }}        >
           To build self-sustaining farming communities rooted in natural
           practices, mindful living, and collective well-being while preserving
@@ -512,7 +512,7 @@ const AboutSection: React.FC = () => {
         <div className="mt-5">
           <button
             onClick={() => setModalOpen(true)}
-            className="inline-block border border-green-600 text-green-600 px-4 py-2 rounded-md text-sm transition-colors duration-200 hover:bg-green-600 hover:text-white"
+            className="inline-block border border-green-600 text-green-600 px-4 py-2 rounded-md text-sm transition-colors duration-200 hover:bg-green-600 hover:text-white cursor-pointer"
           >
             Download Brochure
           </button>
@@ -542,7 +542,7 @@ const AboutSection: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="relative px-6 sm:px-12 md:px-16 lg:px-24">
+      <section className=" bg-[#FFFDF2] relative px-6 sm:px-12 md:px-16 lg:px-24">
         {/* Background Image in Corner */}
           {/*  <div className="absolute -top-68 md:-right-32 lg:-right-15 w-0 md:w-[400px] h-[400px] lg:w-[400px] lg:h-[500px] z-[-1]">
           <Image
@@ -564,8 +564,8 @@ const AboutSection: React.FC = () => {
               ref={About}
               className="text-3xl md:text-4xl font-bold text-gray-900 -mt-10 md:mt-50"
               style={{ fontFamily: "Jost", 
-               fontSize: "67px",
-               lineHeight:"89px",
+               fontSize: "47px",
+              //  lineHeight:"89px",
                color:"#404040", 
                fontWeight: 600 }}
                >
@@ -575,8 +575,8 @@ const AboutSection: React.FC = () => {
               ref={About}
               className="relative text-3xl md:text-4xl font-bold text-gray-900 ml-30 mt-2"
  style={{ fontFamily: "Jost", 
-               fontSize: "67px",
-               lineHeight:"89px",
+               fontSize: "47px",
+              //  lineHeight:"89px",
                color:"#404040", 
                fontWeight: 600 }}            >
               Green Infra
@@ -589,11 +589,11 @@ const AboutSection: React.FC = () => {
               /> */}
             </h2>
             <p
-              className="text-gray-700 text-lg mt-8 md:mt-15"
+              className="text-gray-700 text-lg mt-6 md:mt-10"
               style={{
                 fontFamily: "Josefin Sans",
                 fontWeight: 400,
-                fontSize: "20px",
+                fontSize: "18px",
                  color:"#4a4a4a", 
                  lineHeight:"28px"
 
@@ -635,8 +635,8 @@ const AboutSection: React.FC = () => {
             <Image
               src="/images/about/farm-field.svg"
               alt="Farm Field"
-              width={982}
-              height={996}
+              width={700}
+              height={700}
               className="w-full  h-full object-cover rounded-lg"
             />
           </div>

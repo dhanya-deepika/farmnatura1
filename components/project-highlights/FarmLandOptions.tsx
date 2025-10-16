@@ -115,7 +115,7 @@ const FarmLandOptions = () => {
       <div ref={headingRef} className="flex flex-col items-center text-center relative z-10">
         <h2
           className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold text-gray-800"
-          style={{ fontFamily: "Jost", fontSize:"67px",fontWeight: 600 }}
+          style={{ fontFamily: "Jost", fontSize:"47px",fontWeight: 600 }}
         >
           Farm Land Options
         </h2>
@@ -158,22 +158,23 @@ const FarmLandOptions = () => {
             style={{ fontFamily: "Sofia Pro, sans-serif", fontWeight: 400, fontSize: "19px" }}
           >
             {/* Card Image */}
-            <div
-              className="relative w-full rounded-[10px] overflow-hidden"
-              style={{ aspectRatio: "553 / 627" }} // Maintain ratio
-            >
-              <Image
-                src={card.image}
-                alt="Farm Land"
-                fill
-                style={{ objectFit: "cover" }}
-              />
-            </div>
+           <div
+  className="relative w-full rounded-[10px] overflow-hidden group"
+  style={{ aspectRatio: "553 / 627" }}
+>
+  <Image
+    src={card.image}
+    alt="Farm Land"
+    fill
+    className="object-cover transform transition-transform duration-700 group-hover:scale-105"
+  />
+</div>
+
 
             {/* Card Text */}
             <p
               className="text-gray-700 text-left mt-4 px-2 sm:px-0"
-              style={{ fontFamily: "Sofia Pro, sans-serif", fontWeight: 400, fontSize: "19px" }}
+              style={{ fontFamily: "Sofia Pro, sans-serif", fontWeight: 400, fontSize: "16px" }}
             >
               {card.text}
             </p>

@@ -154,11 +154,11 @@ export default function WhyFarmNatura() {
   ];
 
   return (
-    <section ref={containerRef} className="bg-[#F5F2E6] py-8 md:py-12 px-4 md:px-12">
+    <section ref={containerRef} className="bg-[#F5F2E6] py-8 md:py-10 px-4 md:px-12">
       <h2
         ref={headingRef}
         className="text-3xl md:text-4xl text-center md:text-left font-bold text-[#404040] mb-8"
-        style={{ fontFamily: "Jost",fontSize:"67px", lineHeight:"89px",fontWeight: 600 }}
+        style={{ fontFamily: "Jost",fontSize:"47px", lineHeight:"89px",fontWeight: 600 }}
       >
         Why Farm Natura?
       </h2>
@@ -188,7 +188,7 @@ export default function WhyFarmNatura() {
                   className="text-lg font-bold"
                   style={{
                     color: feature.title === "A Healthier Lifestyle" ? "#282828" : "#FFF",
-                    fontSize: "24px",
+                    fontSize: "20px",
                     fontStyle: "normal",
                     fontWeight: 600,
                     lineHeight: "123.2%", // ~29.6px
@@ -200,7 +200,7 @@ export default function WhyFarmNatura() {
                   className="text-sm"
                   style={{
                     color: feature.title === "A Healthier Lifestyle" ? "#282828" : "#FFF",
-                    fontSize: "19px",
+                    fontSize: "16px",
                     fontStyle: "normal",
                     fontWeight: 400,
                     lineHeight: "123.2%",

@@ -49,7 +49,7 @@ const ProjectHighlight: React.FC = () => {
         <h2 className="text-3xl md:text-5xl font-bold text-24"
         style={{
                   // fontFamily: "Sofia Pro"!,
-                  fontSize:"80px" !,
+                  fontSize:"50px" !,
                   fontWeight: 600,
                   lineHeight:"109px",
                   color:"#fff"

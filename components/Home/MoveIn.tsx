@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 const MoveIn = () => {
   return (
-    <div className="relative h-dvh w-screen overflow-hidden bg-white">
+    <div className=" relative h-dvh w-screen overflow-hidden bg-white">
       {/* Background image */}
       <div className="absolute inset-0 bg-[url(/svg/move-in-container.svg)] bg-no-repeat bg-left bg-cover"></div>
 

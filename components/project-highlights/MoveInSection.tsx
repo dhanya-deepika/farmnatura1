@@ -245,7 +245,7 @@ const MoveInSection: React.FC<MoveInSectionProps> = ({ bgColor }) => {
 
   return (
     <section
-      className="relative flex flex-col lg:flex-row items-center justify-center px-6 md:px-10 pt-28 md:pt-40 lg:pt-80 pb-10 md:pb-16 lg:pb-0 overflow-hidden min-h-[60vh] lg:min-h-[65vh]"
+      className=" bg-[#FFFDF2] relative flex flex-col lg:flex-row items-center justify-center px-6 md:px-10 pt-28 md:pt-40 lg:pt-80 pb-10 md:pb-16 lg:pb-0 overflow-hidden min-h-[60vh] lg:min-h-[65vh]"
       style={{ backgroundColor: bgColor }}
     >
       <Image
@@ -273,7 +273,7 @@ const MoveInSection: React.FC<MoveInSectionProps> = ({ bgColor }) => {
           <button
             ref={buttonRef}
             onClick={() => router.push("/contact")}
-            className="bg-[#3D7B3B] md:bg-white text-white md:text-black font-medium px-6 py-2 md:py-3 text-sm md:text-lg rounded-md shadow hover:bg-gray-100 transition"
+            className="bg-[#3D7B3B] md:bg-white text-white md:text-black font-medium px-6 py-2 md:py-3 text-sm md:text-lg rounded-md shadow hover:bg-green-600 hover:text-white transition cursor-pointer"
           >
             Get in Touch
           </button>
