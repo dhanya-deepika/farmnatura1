@@ -38,10 +38,11 @@ interface FarmNaturaFooterProps {
 
 const FarmNaturaFooter: React.FC<FarmNaturaFooterProps> = ({ bgColor }) => {
   return (
-    <footer
-      className="p-6 w-full relative px-4 md:px-20"
-      style={{ backgroundColor: bgColor }}
-    >
+   <footer
+     className="p-6 w-full relative px-4 md:px-20"
+     style={{ backgroundColor: bgColor || "#F5F2E6" }}
+   >
+
       {/* Top horizontal image */}
       <Image
         src="/images/highlights/horizontal-img.svg"

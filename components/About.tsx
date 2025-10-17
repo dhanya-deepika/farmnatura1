@@ -150,34 +150,58 @@ const AboutSection: React.FC = () => {
   return (
     <div className="overflow-x-hidden bg-[#FFFDF2]">
       {/* Hero Section */}
-      <section className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[600px]">
-        <Image
-          src="/images/about/abouthero.png"
-          alt="Farm Natura Hero Image"
-          fill
-          className="object-cover opacity-90"
-          priority
-        />
-        <div
-          ref={textRef}
-          className="absolute left-[5px] md:left-16 lg:left-20 bottom-[5px] md:bottom-16 lg:bottom-20 text-white"
-        >
-          <h1
-            className="font-bold text-[36px] sm:text-[42px] md:text-[48px] lg:text-[56px] xl:text-[60px]"
-            style={{ fontFamily: "Jost", fontWeight: 600 }}
-          >
-            About Us
-          </h1>
-        </div>
-      </section>
+
+
+      <div
+                  className="
+                    relative w-full
+                    h-[300px]        /* default mobile height */
+                    sm:h-[400px]     /* tablets */
+                    md:h-[550px]     /* small laptops */
+                    lg:h-[684px]     /* desktops */
+                    overflow-hidden
+                  "
+                >
+                  {/* Background Image */}
+                  <div className="absolute inset-0">
+                    <Image
+                     src="/images/about/abouthero.png"
+                      alt="About Us"
+                      fill
+                      className="object-cover w-full h-full"
+                      priority
+                    />
+                  </div>
+
+                  {/* Overlay Text */}
+                  <div
+                    ref={textRef}
+                   className="absolute left-2 md:left-14 top-1/2 -translate-y-1/2 text-white"
+
+                  >
+                    <h2
+                      className="font-bold"
+                      style={{
+                        fontFamily: "Jost",
+                        fontSize: "clamp(22px, 5vw, 50px)",
+                        fontWeight: 600,
+                        lineHeight: "1.2",
+                        color: "#fff",
+                      }}
+                    >
+                      About Us
+                    </h2>
+                  </div>
+
+                </div>
 
  {/* Evolution Natural Farming Section */}
-<section className="bg-[#FFFDF2] py-12 lg:py-10 overflow-hidden">
+<section className="bg-[#FFFDF2] py-0 md:py-2 lg:py-0 overflow-hidden">
   <div className="flex flex-col lg:flex-row items-center justify-between w-full">
     {/* Left - Text */}
-    <div className="w-full lg:w-1/2 px-6 md:px-10 lg:px-16 xl:px-20 flex flex-col justify-center">
+    <div className="w-full lg:w-1/2 px-2 md:px-12 lg:px-16 flex flex-col justify-center">
       <h2
-        className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] leading-tight"
+        className="mt-0 text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] leading-tight"
         style={{ fontFamily: "Jost", fontWeight: 600 }}
       >
         Evolution Natural
@@ -185,7 +209,7 @@ const AboutSection: React.FC = () => {
         Farming
       </h2>
       <p
-        className="mt-5 text-[15px] md:text-[16px] leading-relaxed text-[#282828]"
+        className="mt-2 text-[15px] md:text-[16px] leading-relaxed text-[#282828]"
         style={{
           fontFamily: "Sofia Pro, sans-serif",
           fontWeight: 400,
@@ -219,7 +243,7 @@ const AboutSection: React.FC = () => {
 </section>
 
 {/* Research & Development Section */}
-<section className="bg-[#FFFDF2] py-12 lg:py-16 overflow-hidden">
+<section className="bg-[#FFFDF2] py-2 md:py-10 lg:py-2 overflow-hidden">
   <div className="flex flex-col lg:flex-row items-center justify-between w-full">
     {/* Left - Image Full Edge */}
     <div className="w-full lg:w-1/2 h-[320px] sm:h-[400px] md:h-[450px] lg:h-[520px]">
@@ -237,8 +261,9 @@ const AboutSection: React.FC = () => {
     {/* Right - Text */}
     <div
       ref={researchRef}
-      className="w-full lg:w-1/2 px-6 sm:px-10 md:px-14 lg:px-20 flex flex-col justify-center"
+      className="w-full lg:w-1/2 px-2 md:px-12 lg:px-16 flex flex-col justify-center"
     >
+
       <h2
         className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] leading-tight"
         style={{ fontFamily: "Jost", fontWeight: 600 }}
@@ -285,8 +310,8 @@ const AboutSection: React.FC = () => {
 
 
       {/* Inspired By Section */}
-      <section className="bg-[#FFFDF2] py-[5px] md:py-0 lg:py-14 ">
-        <div ref={inspiredBy} className="container mx-auto px-[5px] md:px-12 lg:px-16 xl:px-20">
+      <section className="bg-[#FFFDF2] py-2 md:py-10 lg:py-2">
+        <div ref={inspiredBy} className="container mx-auto px-2 md:px-12 lg:px-16 xl:px-20">
           <h2
             className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] text-center mb-4 md:mb-10"
             style={{ fontFamily: "Jost", fontWeight: 600 }}
@@ -336,8 +361,9 @@ const AboutSection: React.FC = () => {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="bg-[#FFFDF2] py-[5px] md:py-10 lg:py-14">
-        <div ref={vision} className="container mx-auto px-[5px] md:px-12 lg:px-16 xl:px-20">
+      <section className="bg-[#FFFDF2] py-2 md:py-10 lg:py-2">
+       <div ref={vision} className="container mx-auto px-2 md:px-12 lg:px-16">
+
           <h2
             className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] text-center mb-4 md:mb-8"
             style={{ fontFamily: "Jost", fontWeight: 600 }}
@@ -421,10 +447,11 @@ const AboutSection: React.FC = () => {
       </section>
 
       {/* About Planet Green Infra Section */}
-      <section className="bg-[#FFFDF2] py-[5px] md:py-0 lg:py-14">
+      <section className="bg-[#FFFDF2] py-2 md:py-10 lg:py-2">
         <div ref={About} className="flex flex-col lg:flex-row items-center lg:items-start">
           {/* Left - Text */}
-          <div className="w-full lg:w-1/2 px-[5px] md:px-12 lg:px-16 xl:px-20">
+          <div className="w-full lg:w-1/2 px-2 md:px-12 lg:px-16">
+
             <h2
               className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] leading-tight text-left"
               style={{ fontFamily: "Jost", fontWeight: 600 }}
@@ -470,8 +497,8 @@ const AboutSection: React.FC = () => {
         </div>
       </section>
 
-      <MoveInSection bgColor={"white"} />
-      <FarmNaturaFooter bgColor={"white"} />
+      <MoveInSection  />
+      <FarmNaturaFooter  />
 
       <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
     </div>

@@ -64,7 +64,7 @@ const FarmingExperience: React.FC = () => {
     <>
       <div
         ref={containerRef}
-        className="w-full bg-[#F5F2E6] py-0 md:py-12 lg:py-14 px-0 md:px-12 lg:px-16 xl:px-20 flex flex-col z-10"
+        className="relative bg-[#F5F2E6] py-8 md:py-6 lg:py-14 px-2 md:px-6 lg:px-16 "
         style={{ fontFamily: "Jost" }}
       >
         {/* Title */}
@@ -89,7 +89,7 @@ const FarmingExperience: React.FC = () => {
           style={{
             fontFamily: "Josefin Sans, sans-serif",
             fontWeight: 400,
-            fontSize: "15px",
+            fontSize: "15.5px",
             lineHeight: "1.7",
             color: "#4A4A4A",
             letterSpacing: "0%",
@@ -111,8 +111,9 @@ const FarmingExperience: React.FC = () => {
         <div className="flex flex-col-reverse lg:flex-row lg:justify-between px-0 md:px-0">
           <div
             ref={featureIconsRef}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 justify-items-center items-center w-full lg:w-2/3 mb-4 md:mb-12 px-4 md:px-0"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 justify-items-center items-center w-full lg:w-2/3 mb-4 md:mb-12 px-2 md:px-0"
           >
+
             {[
               {
                 icon: "/images/highlights/flower.svg",
@@ -164,7 +165,7 @@ const FarmingExperience: React.FC = () => {
       </div>
 
       {/* Farm Image */}
-      <section className="bg-[#F5F2E6] pb-0 md:pb-12 px-0">
+      <section className="relative bg-[#F5F2E6] py-0 md:py-6 lg:py-0 px-2 md:px-6 lg:px-0">
         <div
           ref={farmImageRef}
           className="w-full md:w-[90%] h-64 sm:h-80 md:h-96 lg:h-[500px] bg-cover bg-center md:rounded-lg md:shadow-lg mx-auto"

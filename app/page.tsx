@@ -26,9 +26,9 @@ const HomePage = () => {
             Farm Natura
           </p> */}
       </div>
-      <TestimonialSection bgColor={"white"} />
-      <MoveInSection  bgColor={"white"} /> 
-      <FarmNaturaFooter bgColor={"white"} />    
+      <TestimonialSection  bgColor="#FFFDF2"/>
+      <MoveInSection  bgColor="#FFFDF2"/>
+      <FarmNaturaFooter  bgColor="#FFFDF2"/>
     </main>
   );
 };

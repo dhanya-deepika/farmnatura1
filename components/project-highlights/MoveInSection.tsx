@@ -207,7 +207,7 @@ const MoveInSection: React.FC<MoveInSectionProps> = ({ bgColor }) => {
       gsap.from(h2Ref.current, {
         x: -100,
         opacity: 0,
-        duration: 1.5,
+        duration: 0.2,
         ease: "power3.out",
         scrollTrigger: {
           trigger: h2Ref.current,
@@ -219,7 +219,7 @@ const MoveInSection: React.FC<MoveInSectionProps> = ({ bgColor }) => {
       gsap.from(pRef.current, {
         x: 100,
         opacity: 0,
-        duration: 1.5,
+        duration: 0.2,
         ease: "power3.out",
         scrollTrigger: {
           trigger: pRef.current,
@@ -230,7 +230,7 @@ const MoveInSection: React.FC<MoveInSectionProps> = ({ bgColor }) => {
 
       gsap.from(buttonRef.current, {
         opacity: 0,
-        duration: 1.5,
+        duration: 0.2,
         ease: "power3.out",
         scrollTrigger: {
           trigger: buttonRef.current,
@@ -272,7 +272,7 @@ const MoveInSection: React.FC<MoveInSectionProps> = ({ bgColor }) => {
           </p>
           <button
             ref={buttonRef}
-            onClick={() => router.push("/contact")}
+             onClick={() => window.location.href = "/contact"}
             className="bg-[#3D7B3B] md:bg-white text-white md:text-black font-medium px-6 py-2 md:py-3 text-sm md:text-lg rounded-md shadow hover:bg-green-600 hover:text-white transition cursor-pointer"
           >
             Get in Touch

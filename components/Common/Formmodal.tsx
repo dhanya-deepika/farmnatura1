@@ -25,11 +25,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     const { name, value } = e.target;
 
 
-   
+
   if (name === "name") {
-    const namePattern = /^[A-Za-z\s]*$/; 
+    const namePattern = /^[A-Za-z\s]*$/;
     if (!namePattern.test(value)) {
-      return; 
+      return;
     }
   }
 
@@ -48,22 +48,22 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     e.preventDefault();
     setLoading(true);
     setSuccess(false);
-  
+
     try {
       const response = await fetch("http://192.168.0.95:3000/api/sendMail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-  
+
       if (response.ok) {
         setSuccess(true);
         setFormData({ name: "", phone: "", email: "", interestedIn: "", PlotSize: "" });
-  
-       
+
+
         setTimeout(() => {
           onClose();
-          setSuccess(false); 
+          setSuccess(false);
          }, 3000);
       } else {
         alert("Error submitting form");
@@ -75,9 +75,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       setLoading(false);
     }
   };
-  
 
- 
+
+
 
   if (!isOpen) return null;
 
@@ -96,11 +96,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
     {/* Image Section */}
     <div className="w-full md:w-1/2 flex justify-center">
-      <Image 
-        src="/images/form.svg" 
-        alt="Contact Form Image" 
-        width={400} 
-        height={300} 
+      <Image
+        src="/images/form.svg"
+        alt="Contact Form Image"
+        width={400}
+        height={300}
         className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-none h-auto rounded-lg"
       />
     </div>

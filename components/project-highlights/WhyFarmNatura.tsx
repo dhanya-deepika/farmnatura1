@@ -48,7 +48,7 @@ export default function WhyFarmNatura() {
   useEffect(() => {
     const ctx = gsap.context(() => {
     const mm = gsap.matchMedia(); // Create a matchMedia instance
-  
+
     mm.add("(min-width: 768px)", () => {
       // Desktop animations
       if (headingRef.current) {
@@ -68,7 +68,7 @@ export default function WhyFarmNatura() {
           }
         );
       }
-  
+
       if (cardsRef.current) {
         cardsRef.current.forEach((card, index) => {
           if (!card) return;
@@ -77,7 +77,7 @@ export default function WhyFarmNatura() {
 
 
           const direction = index % 2 === 0 ? -100 : 100; // alternate slide directions
-    
+
           gsap.fromTo(
             card,
             { x: direction, y: 50, opacity: 0 },
@@ -97,7 +97,7 @@ export default function WhyFarmNatura() {
         });
       }
       });
-  
+
     mm.add("(max-width: 767px)", () => {
       // Mobile animations (adjusted start position)
       if (headingRef.current) {
@@ -117,10 +117,10 @@ export default function WhyFarmNatura() {
           }
         );
       }
-  
+
       cardsRef.current.forEach((card) => {
         if (!card) return;
-  
+
         gsap.fromTo(
           card,
           { y: 50, opacity: 0 },
@@ -144,7 +144,7 @@ export default function WhyFarmNatura() {
 
     return () => ctx.revert();
   }, []);
-  
+
 
   const textColors = [
     "text-white", // First card
@@ -154,16 +154,21 @@ export default function WhyFarmNatura() {
   ];
 
   return (
-    <section ref={containerRef} className="bg-[#F5F2E6] py-0 md:py-12 lg:py-14 px-0 md:px-12 lg:px-16 xl:px-20">
-      <h2
-        ref={headingRef}
-        className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[47px] text-left font-bold text-[#404040] mb-4 md:mb-8 px-4 md:px-0"
-        style={{ fontFamily: "Jost", fontWeight: 600, lineHeight: "1.3" }}
-      >
-        Why Farm Natura?
-      </h2>
+    <section ref={containerRef} className="bg-[#F5F2E6] py-8 md:py-10 px-4 md:px-12">
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-6">
+      <h2
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800 mb-8"
+              style={{
+                fontFamily: "Jost",
+                fontSize: "clamp(24px, 5vw, 47px)", // responsive: min 24px, max 47px
+                fontWeight: 600,
+                lineHeight: "1.2", // optional, adjust for spacing
+              }}
+            >
+              Why Farm Natura?
+            </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -171,37 +176,37 @@ export default function WhyFarmNatura() {
                 cardsRef.current[index] = el;
               }}
               className={`relative rounded-lg overflow-hidden shadow-md ${
-                index === 2 ? "md:-mt-12 lg:-mt-16" : index === 3 ? "md:mt-2 lg:mt-4" : ""
+                index === 2 ? "md:-mt-20" : index === 3 ? "mt-4" : ""
               }`}
-              style={{
-                height: "auto",
-                aspectRatio: index === 0 || index === 3 ? "795/401" : "792/532"
-              }}
+              style={{ height: `${feature.height}px`}}
             >
               <Image
                 src={feature.image}
                 alt={feature.title}
-                fill
-                className="object-cover"
+                width={feature.width}
+                height={feature.height}
+                className="object-cover w-full h-full"
               />
               <div
-                className={`absolute inset-0 bg-opacity-40 flex flex-col justify-start p-4 sm:p-5 md:p-6 ${textColors[index]}`}>
+                className={`absolute inset-0 bg-opacity-40 flex flex-col justify-start p-6 ${textColors[index]}`}>
                 <h3
-                  className="text-[16px] sm:text-[18px] md:text-[20px] font-bold text-left mb-2"
+                  className="text-lg font-bold"
                   style={{
                     color: feature.title === "A Healthier Lifestyle" ? "#282828" : "#FFF",
-                    fontFamily: "Jost",
+                    fontSize: "20px",
+                    fontStyle: "normal",
                     fontWeight: 600,
-                    lineHeight: "123.2%",
+                    lineHeight: "123.2%", // ~29.6px
                   }}
                 >
                   {feature.title}
                 </h3>
                 <p
-                  className="text-[13px] sm:text-[14px] md:text-[16px] text-left md:text-justify"
+                  className="text-sm"
                   style={{
                     color: feature.title === "A Healthier Lifestyle" ? "#282828" : "#FFF",
-                    fontFamily: "Sofia Pro, sans-serif",
+                    fontSize: "16px",
+                    fontStyle: "normal",
                     fontWeight: 400,
                     lineHeight: "123.2%",
                   }}

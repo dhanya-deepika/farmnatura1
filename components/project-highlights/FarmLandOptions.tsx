@@ -6,7 +6,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Modal from "../Common/Formmodal";
 
-// Register ScrollTrigger globally
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -109,39 +108,43 @@ const FarmLandOptions = () => {
   return (
     <section
       ref={containerRef}
-      className="relative bg-[#F5F2E6] py-0 md:py-12 lg:py-14 px-0 md:px-12 lg:px-16 xl:px-20"
+      className="relative bg-[#F5F2E6] py-12 px-2 md:px-6 lg:px-10
+"
     >
       {/* Header */}
-      <div ref={headingRef} className="flex flex-col items-center text-center relative z-10 px-4 md:px-0">
-        <h2
-          className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[47px] font-bold text-gray-800 mb-4 md:mb-0"
-          style={{ fontFamily: "Jost", fontWeight: 600, lineHeight: "1.3" }}
-        >
-          Farm Land Options
-        </h2>
+      <div ref={headingRef} className="flex flex-col items-center text-center relative z-10">
+      <h2
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800"
+        style={{
+          fontFamily: "Jost",
+          fontSize: "clamp(24px, 5vw, 47px)", // responsive: min 24px, max 47px
+          fontWeight: 600,
+          lineHeight: "1.2", // optional, adjust for spacing
+        }}
+      >
+        Farm Land Options
+      </h2>
+
 
         {/* Tabs */}
         <div
           ref={buttonRef}
-          className="flex items-center justify-center mt-4 md:mt-6"
+          className="flex items-center justify-center md:space-x-4 mt-6 text-sm lg:text-lg"
           style={{ fontFamily: "Sofia Pro", fontWeight: 400 }}
         >
           <button
-            className={`transition font-medium text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] ${
+            className={`transition font-medium text-sm lg:text-lg ${
               activeTab === "plot"
                 ? "bg-[#358B6C] text-white"
                 : "bg-transparent text-green-700 border"
             }`}
             style={{
-              width: "100%",
-              maxWidth: "280px",
-              height: "45px",
+              width: "280px",
+              height: "50px",
               borderRadius: "8px",
               borderWidth: "1px",
               borderStyle: "solid",
               borderColor: activeTab === "plot" ? "transparent" : "#358B6C",
-              paddingLeft: "24px",
-              paddingRight: "24px",
             }}
             onClick={() => setActiveTab("plot")}
           >
@@ -151,12 +154,13 @@ const FarmLandOptions = () => {
       </div>
 
       {/* Cards */}
-      <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 md:gap-6 mx-auto mt-4 md:mt-12 z-10 px-0 md:px-0">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto mt-12 z-10">
         {cards.map((card, index) => (
           <div
             key={index}
             ref={(el) => { cardRefs.current[index] = el; }}
-            className="flex flex-col items-start w-full max-w-[550px] mx-auto"
+            className="flex flex-col w-full mx-auto"
+            style={{ maxWidth: "100%", fontFamily: "Sofia Pro, sans-serif", fontWeight: 400, fontSize: "19px" }}
           >
             {/* Card Image */}
             <div
@@ -173,13 +177,8 @@ const FarmLandOptions = () => {
 
             {/* Card Text */}
             <p
-              className="text-gray-700 text-left md:text-justify mt-3 md:mt-4 px-0"
-              style={{
-                fontFamily: "Sofia Pro, sans-serif",
-                fontWeight: 400,
-                fontSize: "14px",
-                lineHeight: "1.6"
-              }}
+              className="text-gray-700  mt-4 pl-2 pr-2 md:pl-4 md:pr-4"
+              style={{ fontFamily: "Sofia Pro, sans-serif", fontWeight: 400, fontSize: "16px" }}
             >
               {card.text}
             </p>
@@ -187,29 +186,20 @@ const FarmLandOptions = () => {
         ))}
       </div>
 
-    <div className="relative mt-[-10px] sm:mt-[-20px] md:mt-[-30px] lg:mt-[-40px] w-full">
-      {/* Full-width overflow image */}
-<div className="relative w-screen left-1/2 right-1/2 -translate-x-1/2 mt-[-10px] sm:mt-[-20px] md:mt-[-30px] lg:mt-[-40px] overflow-hidden">
-  <Image
-    src="/home/choose-bottom.png"
-    width={2560}
-    height={800}
-    alt="choose"
-    className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] object-cover"
-    loading="lazy"
-  />
-</div>
 
-            {/* <div className="absolute right-0 bottom-[10%] sm:bottom-[15%] md:bottom-[20%] w-[25%] sm:w-[20%] md:w-[18%] lg:w-[15%] xl:w-[12%] 2xl:w-[10%]">
-              <Image
-                src="/home/choose-right.png"
-                width={400}
-                height={500}
-                alt="choose-right"
-                className="w-full h-auto object-contain"
-              />
-            </div> */}
-          </div>
+
+      <div className="relative mt-[-10px] sm:mt-[-20px] md:mt-[-30px] lg:mt-[-40px] w-full">
+        <div className="relative w-screen left-1/2 right-1/2 -translate-x-1/2 mt-[-10px] sm:mt-[-20px] md:mt-[-30px] lg:mt-[-40px] overflow-hidden">
+          <Image
+            src="/home/choose-bottom.png"
+            width={2560}
+            height={800}
+            alt="choose"
+            className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
 
       {/* Modal */}
       <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />

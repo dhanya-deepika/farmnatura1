@@ -47,9 +47,9 @@ const ProjectHighlights: React.FC = () => {
           </p> */}
         </div>
         {/* Pass bgColor prop */}
-        <TestimonialSection bgColor="#fffbe4" />
-        <MoveInSection bgColor="#fffbe4" />
-        <FarmNaturaFooter bgColor="#fffbe4" />
+        <TestimonialSection  bgColor="#FFFDF2"/>
+        <MoveInSection  bgColor="#FFFDF2"/>
+        <FarmNaturaFooter  bgColor="#FFFDF2"/>
       </main>
     </>
   );
