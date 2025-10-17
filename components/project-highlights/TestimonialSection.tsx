@@ -6,7 +6,7 @@ interface TestimonialSectionProps {
   bgColor?: string;
 }
 
-const TestimonialSection: React.FC<TestimonialSectionProps> = ({ bgColor }) => {
+const TestimonialSection: React.FC<TestimonialSectionProps> = ({  }) => {
   return (
     <section
       className="relative py-0 md:py-12 lg:py-14 px-0 md:px-12 lg:px-16 xl:px-20 overflow-hidden"
