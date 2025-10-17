@@ -154,16 +154,16 @@ export default function WhyFarmNatura() {
   ];
 
   return (
-    <section ref={containerRef} className="bg-[#F5F2E6] py-8 md:py-10 px-4 md:px-12">
+    <section ref={containerRef} className="bg-[#F5F2E6] py-0 md:py-12 lg:py-14 px-0 md:px-12 lg:px-16 xl:px-20">
       <h2
         ref={headingRef}
-        className="text-3xl md:text-4xl text-center md:text-left font-bold text-[#404040] mb-8"
-        style={{ fontFamily: "Jost",fontSize:"47px", lineHeight:"89px",fontWeight: 600 }}
+        className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[47px] text-left font-bold text-[#404040] mb-4 md:mb-8 px-4 md:px-0"
+        style={{ fontFamily: "Jost", fontWeight: 600, lineHeight: "1.3" }}
       >
         Why Farm Natura?
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -171,37 +171,37 @@ export default function WhyFarmNatura() {
                 cardsRef.current[index] = el;
               }}
               className={`relative rounded-lg overflow-hidden shadow-md ${
-                index === 2 ? "md:-mt-20" : index === 3 ? "mt-4" : ""
+                index === 2 ? "md:-mt-12 lg:-mt-16" : index === 3 ? "md:mt-2 lg:mt-4" : ""
               }`}
-              style={{ height: `${feature.height}px`}}
+              style={{
+                height: "auto",
+                aspectRatio: index === 0 || index === 3 ? "795/401" : "792/532"
+              }}
             >
               <Image
                 src={feature.image}
                 alt={feature.title}
-                width={feature.width}
-                height={feature.height}
-                className="object-cover w-full h-full"
+                fill
+                className="object-cover"
               />
               <div
-                className={`absolute inset-0 bg-opacity-40 flex flex-col justify-start p-6 ${textColors[index]}`}>
+                className={`absolute inset-0 bg-opacity-40 flex flex-col justify-start p-4 sm:p-5 md:p-6 ${textColors[index]}`}>
                 <h3
-                  className="text-lg font-bold"
+                  className="text-[16px] sm:text-[18px] md:text-[20px] font-bold text-left mb-2"
                   style={{
                     color: feature.title === "A Healthier Lifestyle" ? "#282828" : "#FFF",
-                    fontSize: "20px",
-                    fontStyle: "normal",
+                    fontFamily: "Jost",
                     fontWeight: 600,
-                    lineHeight: "123.2%", // ~29.6px
+                    lineHeight: "123.2%",
                   }}
                 >
                   {feature.title}
                 </h3>
                 <p
-                  className="text-sm"
+                  className="text-[13px] sm:text-[14px] md:text-[16px] text-left md:text-justify"
                   style={{
                     color: feature.title === "A Healthier Lifestyle" ? "#282828" : "#FFF",
-                    fontSize: "16px",
-                    fontStyle: "normal",
+                    fontFamily: "Sofia Pro, sans-serif",
                     fontWeight: 400,
                     lineHeight: "123.2%",
                   }}

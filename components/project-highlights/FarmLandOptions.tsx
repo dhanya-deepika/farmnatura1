@@ -109,13 +109,13 @@ const FarmLandOptions = () => {
   return (
     <section
       ref={containerRef}
-      className="relative bg-[#F5F2E6] py-12 px-6 lg:px-16"
+      className="relative bg-[#F5F2E6] py-0 md:py-12 lg:py-14 px-0 md:px-12 lg:px-16 xl:px-20"
     >
       {/* Header */}
-      <div ref={headingRef} className="flex flex-col items-center text-center relative z-10">
+      <div ref={headingRef} className="flex flex-col items-center text-center relative z-10 px-4 md:px-0">
         <h2
-          className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold text-gray-800"
-          style={{ fontFamily: "Jost", fontSize:"47px",fontWeight: 600 }}
+          className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[47px] font-bold text-gray-800 mb-4 md:mb-0"
+          style={{ fontFamily: "Jost", fontWeight: 600, lineHeight: "1.3" }}
         >
           Farm Land Options
         </h2>
@@ -123,58 +123,63 @@ const FarmLandOptions = () => {
         {/* Tabs */}
         <div
           ref={buttonRef}
-          className="flex items-center justify-center md:space-x-4 mt-6 text-sm lg:text-lg"
+          className="flex items-center justify-center mt-4 md:mt-6"
           style={{ fontFamily: "Sofia Pro", fontWeight: 400 }}
         >
           <button
-  className={`transition font-medium text-sm lg:text-lg ${
-    activeTab === "plot"
-      ? "bg-[#358B6C] text-white"
-      : "bg-transparent text-green-700 border"
-  }`}
-  style={{
-    width: "280px",
-    height: "50px",
-    borderRadius: "8px",
-    borderWidth: "1px",
-    borderStyle: "solid",
-    borderColor: activeTab === "plot" ? "transparent" : "#358B6C",
-  }}
-  onClick={() => setActiveTab("plot")}
->
-  Plot Sizes
-</button>
-
+            className={`transition font-medium text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] ${
+              activeTab === "plot"
+                ? "bg-[#358B6C] text-white"
+                : "bg-transparent text-green-700 border"
+            }`}
+            style={{
+              width: "100%",
+              maxWidth: "280px",
+              height: "45px",
+              borderRadius: "8px",
+              borderWidth: "1px",
+              borderStyle: "solid",
+              borderColor: activeTab === "plot" ? "transparent" : "#358B6C",
+              paddingLeft: "24px",
+              paddingRight: "24px",
+            }}
+            onClick={() => setActiveTab("plot")}
+          >
+            Plot Sizes
+          </button>
         </div>
       </div>
 
       {/* Cards */}
-      <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto mt-12 z-10">
+      <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 md:gap-6 mx-auto mt-4 md:mt-12 z-10 px-0 md:px-0">
         {cards.map((card, index) => (
           <div
             key={index}
             ref={(el) => { cardRefs.current[index] = el; }}
-            className="flex flex-col items-center w-full max-w-[550px] mx-auto"
-            style={{ fontFamily: "Sofia Pro, sans-serif", fontWeight: 400, fontSize: "19px" }}
+            className="flex flex-col items-start w-full max-w-[550px] mx-auto"
           >
             {/* Card Image */}
-           <div
-  className="relative w-full rounded-[10px] overflow-hidden group"
-  style={{ aspectRatio: "553 / 627" }}
->
-  <Image
-    src={card.image}
-    alt="Farm Land"
-    fill
-    className="object-cover transform transition-transform duration-700 group-hover:scale-105"
-  />
-</div>
-
+            <div
+              className="relative w-full rounded-[10px] overflow-hidden group"
+              style={{ aspectRatio: "553 / 627" }}
+            >
+              <Image
+                src={card.image}
+                alt="Farm Land"
+                fill
+                className="object-cover transform transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
 
             {/* Card Text */}
             <p
-              className="text-gray-700 text-left mt-4 px-2 sm:px-0"
-              style={{ fontFamily: "Sofia Pro, sans-serif", fontWeight: 400, fontSize: "16px" }}
+              className="text-gray-700 text-left md:text-justify mt-3 md:mt-4 px-0"
+              style={{
+                fontFamily: "Sofia Pro, sans-serif",
+                fontWeight: 400,
+                fontSize: "14px",
+                lineHeight: "1.6"
+              }}
             >
               {card.text}
             </p>

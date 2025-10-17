@@ -5,7 +5,7 @@ import gsap from "gsap";
 import Image from "next/image";
 
 interface TestimonialSectionProps {
-  bgColor?: string; // ✅ Add bgColor prop
+  bgColor?: string;
 }
 
 const TestimonialSection: React.FC<TestimonialSectionProps> = ({ bgColor }) => {
@@ -34,33 +34,28 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ bgColor }) => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-8 md:py-16 px-4 md:px-15 overflow-hidden"
-      style={{ backgroundColor: bgColor || "transparent" }} // ✅ Apply bgColor
+      className="relative py-0 md:py-12 lg:py-14 px-0 md:px-12 lg:px-16 xl:px-20 overflow-hidden"
+      style={{ backgroundColor: bgColor || "transparent" }}
     >
-      <div className="max-w-8xl mx-auto relative pl-12">
-        {/* Decorative Quote */}
-        {/* <div className="absolute hidden md:block -top-2 left-20 md:left-80 text-6xl md:text-8xl text-gray-400 font-serif">
-          “
-        </div> */}
-
+      <div className="max-w-8xl mx-auto relative">
         {/* Testimonial Text */}
-        <div className="relative z-10">
+        <div className="relative z-10 px-4 md:px-0">
           <h3
-            className="text-gray-500 text-base md:text-lg tracking-wide font-light"
+            className="text-gray-500 text-[14px] sm:text-[15px] md:text-[16px] tracking-wide font-light text-left mb-2 md:mb-0"
             style={{ fontFamily: "Poppins" }}
           >
             Testimonials
           </h3>
           <h2
-            className="text-2xl md:text-4xl font-medium text-gray-900 mt-2 leading-tight max-w-xs md:max-w-md"
+            className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium text-gray-900 mt-2 leading-tight max-w-xs md:max-w-md text-left mb-4 md:mb-0"
             style={{ fontFamily: "Jost" }}
           >
             Where Dreams Find Their Perfect Address
           </h2>
 
           {/* Image and User Info Container */}
-          <div className="relative mt-8 md:mt-12 mb-4">
-            <div className="absolute -bottom-5 left-0 md:-bottom-65 md:left-6 z-20 w-24 h-28 md:w-88 md:h-100">
+          <div className="relative mt-4 md:mt-8 mb-4">
+            <div className="absolute -bottom-5 left-4 md:-bottom-65 md:left-6 z-20 w-20 h-24 sm:w-24 sm:h-28 md:w-88 md:h-100">
               <div className="overflow-hidden">
                 <Image
                   src="/images/girl-img.svg"
@@ -72,21 +67,21 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ bgColor }) => {
               </div>
             </div>
 
-            <div className="ml-28 md:ml-105 pt-4 md:pt-8 md:pb-5">
+            <div className="ml-24 sm:ml-28 md:ml-105 pt-4 md:pt-8 md:pb-5">
               <h3
-                className="text-lg md:text-2xl font-semibold text-gray-900 mb-1 md:mb-4"
+                className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-semibold text-gray-900 mb-1 md:mb-4 text-left"
                 style={{ fontFamily: "Jost" }}
               >
                 Excellency Of Living Standards
               </h3>
               <p
-                className="text-sm md:text-base font-medium text-black-700 mb-0 md:mb-1"
+                className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-medium text-black-700 mb-0 md:mb-1 text-left"
                 style={{ fontFamily: "Jost" }}
               >
                 Ridhira Sheik
               </p>
               <p
-                className="text-xs md:text-sm text-black-500"
+                className="text-[12px] sm:text-[13px] md:text-[14px] text-black-500 text-left"
                 style={{ fontFamily: "Jost" }}
               >
                 Product Manager
@@ -95,12 +90,12 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ bgColor }) => {
           </div>
 
           {/* Testimonial Quote Box */}
-          <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen  bg-[#3D7B3B] text-white p-6 md:p-8 pt-20 md:pt-12 shadow-lg">
+          <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#3D7B3B] text-white p-6 md:p-8 pt-20 md:pt-12 shadow-lg">
             <div className="absolute -top-4 left-4 md:-top-8 md:left-8 w-20 h-24 md:w-48 md:h-56 z-10"></div>
 
             <p
-              className="text-sm md:text-base leading-relaxed md:pl-115"
-              style={{ fontFamily: "Jost" }}
+              className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] leading-relaxed text-left md:text-justify px-4 sm:px-6 md:pl-115"
+              style={{ fontFamily: "Jost", lineHeight: "1.7" }}
             >
               &ldquo;I couldn&apos;t have asked for a better place to call home
               than FARM NATURA Urban One. From the moment I 
@@ -122,3 +117,4 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ bgColor }) => {
 };
 
 export default TestimonialSection;
+
