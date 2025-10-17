@@ -197,7 +197,7 @@ interface MoveInSectionProps {
 }
 
 const MoveInSection: React.FC<MoveInSectionProps> = ({ bgColor }) => {
-  const router = useRouter();
+
   const h2Ref = useRef<HTMLHeadingElement>(null);
   const pRef = useRef<HTMLParagraphElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);

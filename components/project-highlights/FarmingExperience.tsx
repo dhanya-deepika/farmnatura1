@@ -101,10 +101,10 @@ const FarmingExperience: React.FC = () => {
           for you to start experiencing the joys of growing your own food, building your
           dream farmhouse, or simply escaping to nature whenever you choose.
           <br />
-          Whether you're here every weekend or once a month, your land stays active,
+          Whether you&apos;re here every weekend or once a month, your land stays active,
           fertile, and toxin-free, so you can enjoy the benefits without the burden.
           <br />
-          It's not just land. It's peace of mind, rooted in nature.
+          It&apos;s not just land. It&apos;s peace of mind, rooted in nature.
         </div>
 
         {/* Feature Icons */}

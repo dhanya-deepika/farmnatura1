@@ -41,9 +41,7 @@ const Contact = () => {
 
     if (name === "name") {
       const namePattern = /^[A-Za-z\s]*$/;
-      if (!namePattern.test(value)) {
-        return;
-      }
+      if (!namePattern.test(value)) return;
     }
 
     setFormData((prevData) => ({
@@ -72,7 +70,6 @@ const Contact = () => {
       return;
     }
 
-    // Phone validation
     const phonePattern = /^[0-9]{10}$/;
     if (!phonePattern.test(formData.phone)) {
       alert("Please enter a valid 10-digit phone number.");
@@ -87,22 +84,12 @@ const Contact = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          interestedIn: formData.interestedIn,
-          PlotSize: formData.PlotSize,
-        }),
+        body: JSON.stringify(formData),
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to send message");
-      }
+      if (!response.ok) throw new Error("Failed to send message");
 
-      const data = await response.json();
-      console.log("Form Submitted:", data);
-
+      await response.json();
       setSuccess(true);
       setFormData({
         name: "",
@@ -112,7 +99,7 @@ const Contact = () => {
         PlotSize: "",
       });
     } catch (error) {
-      console.error("Error submitting the form:", error);
+      console.error(error);
       alert("There was an error submitting the form.");
     } finally {
       setLoading(false);
@@ -133,7 +120,6 @@ const Contact = () => {
         className="flex flex-col md:flex-row items-center bg-[#FFFFF] p-6 md:p-10 rounded-lg shadow-2xl max-w-4xl mx-auto mt-8"
       >
         {/* Image Section */}
-
         <div className="w-full md:w-1/2">
           <Image
             src="/images/contact/form.svg"
@@ -143,20 +129,24 @@ const Contact = () => {
             className="w-full h-auto rounded-lg"
           />
         </div>
+
         {/* Form Section */}
         <div className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-10">
-          <h2 className="text-lg font-bold text-green-800 mb-1">Book</h2>
-          <h3 className="text-xl font-semibold text-green-800 mb-1">
-            A site visit
-          </h3>
-          <h2 className="text-lg text-green-800 mt-6">Send Us A Message</h2>
+          {/* Card Header inside form */}
+          <div className="mb-6">
+
+            <h3 className="text-xl font-semibold text-green-800">
+               Book A site visit
+            </h3>
+          </div>
+
           {success && (
-            <p className="text-green-600 text-sm mt-2">
+            <p className="text-green-600 text-sm mb-2">
               Your message has been sent successfully!
             </p>
           )}
 
-          <form className="mt-4 space-y-4" onSubmit={handleSubmit}>
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
@@ -180,19 +170,13 @@ const Contact = () => {
               name="phone"
               value={formData.phone}
               onChange={(e) => {
-                const value = e.target.value;
-
-                if (/^\d{0,10}$/.test(value)) {
-                  handleChange(e);
-                }
+                if (/^\d{0,10}$/.test(e.target.value)) handleChange(e);
               }}
               placeholder="Phone"
               className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
               required
               maxLength={10}
             />
-
-            {/* Interested In Dropdown */}
             <select
               name="interestedIn"
               value={formData.interestedIn}
@@ -205,8 +189,6 @@ const Contact = () => {
               <option value="Residential Plots">Farm House</option>
               <option value="Weekend Destination">Weekend Destination</option>
             </select>
-
-            {/* Looking Plot Size Dropdown */}
             <select
               name="PlotSize"
               value={formData.PlotSize}
@@ -217,17 +199,13 @@ const Contact = () => {
               <option value="">Looking Plot Size</option>
               <option value="200-300 Sq Yards">1000 sq.yards</option>
               <option value="300-500 Sq Yards">1/4 Acre (1210 sq.yards)</option>
-              <option value="500-1000 Sq Yards">
-                1/2 Acre (2420 sq.yards)
-              </option>
-              <option value="Above 1000 Sq Yards">
-                1 Acre (4840 sq.yards)
-              </option>
+              <option value="500-1000 Sq Yards">1/2 Acre (2420 sq.yards)</option>
+              <option value="Above 1000 Sq Yards">1 Acre (4840 sq.yards)</option>
             </select>
 
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 bg-yellow-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-yellow-600 transition"
+              className="w-full md:w-auto flex justify-center items-center gap-2 bg-yellow-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-yellow-600 transition"
               disabled={loading}
             >
               {loading ? "Submitting..." : "Submit →"}
