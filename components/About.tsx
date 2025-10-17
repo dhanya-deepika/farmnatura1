@@ -7,6 +7,7 @@ import MoveInSection from "./project-highlights/MoveInSection";
 import FarmNaturaFooter from "./project-highlights/FarmNaturaFooter";
 import Modal from "./Common/Formmodal";
 import Image from "next/image";
+import { Jost } from "next/font/google";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -165,7 +166,7 @@ const AboutSection: React.FC = () => {
           ref={textRef}
           className="absolute left-6 sm:left-8 md:left-16 top-1/2 transform -translate-y-1/2 text-white text-24"
         >
-          <h1 className="text-3xl md:text-5xl font-bold">About Us</h1>
+          <h1 className="font-bold text-[50px]">About Us</h1>
         </div>
       </section>
 
@@ -177,16 +178,21 @@ const AboutSection: React.FC = () => {
             className="flex flex-col md:flex-row items-center md:justify-between mx-auto w-full relative"
           >
             {/* Left - Text */}
-            <div className="w-full md:w-[60%] z-10 px-20 md:px-20 lg:mt-10 -space-y-[20px] mt-12 flex flex-col md:items-start items-center">
+            <div className="w-full md:w-[60%] z-10 px-20 md:px-20 lg:mt-9 -space-y-[20px] mt-12 flex flex-col md:items-start items-center">
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-bold  text-[#404040]"
-                style={{ fontFamily: "Jost", fontWeight: 600 }}
+                className="text-3xl md:text-4xl mt-2 md:mb-0 lg:mt-5 lg:text-5xl font-bold  text-[#404040]"
+                style={{
+                  fontFamily: "Jost",
+                  fontSize: "47px",
+                  lineHeight: "40px",
+                  fontWeight: 600
+                }}
               >
                 Founder’s Vision
               </h2>
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl mt-2 md:mt-1 lg:mt-5 font-bold text-[#404040] flex items-center"
-                style={{ fontFamily: "Jost", fontWeight: 600 }}
+                className="text-3xl md:text-4xl lg:text-5xl mt-2 md:mb-0 lg:mt-5 font-bold text-[#404040] flex items-center"
+                style={{ fontFamily: "Jost",fontSize:"47px", fontWeight: 600 }}
               >
                 Farming
                 
@@ -194,8 +200,11 @@ const AboutSection: React.FC = () => {
               <p
                 className="mt-9 w-full text-black text-sm lg:text-md xl:text-lg 2xl:text-xl"
                 style={{
-                  fontFamily: "Sofia Pro",
+                  // fontFamily: "Sofia Pro"!,
+                  fontSize:"16px" !,
                   fontWeight: 400,
+                  lineHeight:"123.2%",
+                  color:"#282828"
                 }}
               >
                 Farm Natura was started with a mission to reconnect people with
@@ -231,35 +240,33 @@ const AboutSection: React.FC = () => {
           {/* Research & Development Section */}
           <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full relative mt-[-8%] lg:mt-[-4%] xl:mt-0">
             {/* Left - Image Full Width */}
-            <div className="relative w-full md:w-1/2 flex flex-col ml-0">
+            <div className="relative w-full md:w-1/1 flex flex-col ml-0">
               <Image
-                src="/images/about/pottery.svg"
+                src="/images/about/image76.PNG"
                 alt="Pottery"
                 width={550}
                 height={400}
-                className="object-cover w-[98%]"
+                className="object-cover w-[100%]"
               />
-               {/*  <Image
-                src="/images/vine.svg"
-                alt="tree"
-                width={280}
-                height={250}
-                className="absolute object-cover md:w-[70%] top-40 left-0 w-0"
-              /> */}
             </div>
 
-            <div className="w-full md:w-1/2 relative flex flex-col md:items-start items-center px-6">
+            <div className="w-full md:w-1/.8 relative flex flex-col md:items-start items-center px-6">
               <div
                 ref={researchRef}
                 className="relative z-10 flex flex-col mt-4 font-bold text-[#404040] space-y-2 2xl:ml-[21%]"
                 style={{
-                  fontFamily: "Jost",
+                  // fontFamily: "Jost"!,
                   fontWeight: 600,
                   fontSize: "clamp(28px, 5vw, 50px)",
                 }}
               >
-                <span className="fade-in">Research & </span>
-                <span className="fade-in flex justify-center items-center lg:mt-[-3%] lg:ml-[-10%]">
+                <span className="fade-in"  style={{
+                  fontFamily: "Jost"!,
+                  fontWeight: 600,
+                  lineHeight:"60px",
+                  fontSize: "47px",
+                }}
+                >Research & <br/>
                   Development
                 </span>
 
@@ -267,18 +274,21 @@ const AboutSection: React.FC = () => {
                 {/* Paragraph */}
                 <p
                   className="fade-in mt-4 lg:mt-[6%] w-full sm:max-w-[700px] text-black text-sm sm:text-base 2xl:text-lg"
-                  style={{
-                    fontFamily: "Sofia Pro",
-                    fontWeight: 400,
-                  }}
+                 style={{
+                  // fontFamily: "Sofia Pro"!,
+                  fontSize:"16px" !,
+                  fontWeight: 400,
+                  lineHeight:"123.2%",
+                  color:"#282828"
+                }}
                 >
                   Farm Natura offers a community of like-minded families from
                   Hyderabad, where lifestyle is built basing on Natural Farming
                   with an intent to focus on Health & Happiness. <br />
-                  <br />
+                  
                   Respct Mother Nature And Land. &quot;We Are Part Of Nature;
                   Therefore, We Must Coexist With The Other Creatures That Live
-                  Among Us.&quot; <br />
+                  Among Us.&quot; 
                   <br />
                   Our passion is to promote the &ldquo;Agri&rdquo; based Culture
                   and bringing back the Ecological balanced Lifestyle with
@@ -290,20 +300,20 @@ const AboutSection: React.FC = () => {
 
               {/* Download Button */}
               <a
-                className="fade-in mt-10 inline-block border border-green-700 text-green-700 px-6 py-2 rounded-lg text-lg 2xl:ml-[21%] font-semibold transition duration-300 hover:bg-green-700 hover:text-white z-1"
+                className="fade-in mt-10 inline-block border border-green-700 text-green-700 px-6 py-2 rounded-lg text-lg 2xl:ml-[21%] font-semibold transition duration-300 hover:bg-green-700 hover:text-white z-1 cursor-pointer"
                 onClick={() => setModalOpen(true)}
               >
                 Download Brochure
               </a>
 
               {/* Farm Image */}
-              <Image
+              {/* <Image
   src="/images/farm-exp-2.svg"
   alt="home-img"
   width={900} // max width for 2xl
   height={500} // adjust as needed
   className="absolute z-0 -top-32 md:top-[-70] lg:top-[-110] xl:top-[-150] 2xl:top-[-280] right-0"
-/>
+/> */}
 
             </div>
           </div>
@@ -311,7 +321,7 @@ const AboutSection: React.FC = () => {
           {/* Inspired By Section */}
          <div
     ref={inspiredBy}
-    className="mb-6 -mt-30 md:-mt-20 xl:-mt-5 2xl:mt-40 flex flex-col items-center justify-center w-full"
+    className="mb-6 -mt-30 md:-mt-21 xl:-mt-5 2xl:mt-40 flex flex-col items-center justify-center w-full"
     style={{
       fontFamily: "Jost"
     }}
@@ -335,11 +345,15 @@ const AboutSection: React.FC = () => {
       <Image
         src="/images/vinayram.svg"
         alt="Vinay Ram"
-        width={240}
-        height={240}
+        width={362}
+        height={362}
         className="rounded-full shadow-lg"
       />
-      <p className="mt-4 text-lg font-semibold">Vinay Ram</p>
+      <p className="mt-4 text-lg font-semibold"
+      style={{ fontFamily:"Jost",
+       fontSize: "28px",
+       color:"#404040" }}>
+        Vinay Ram</p>
     </div>
 
     {/* Subhash Palekar */}
@@ -347,11 +361,17 @@ const AboutSection: React.FC = () => {
       <Image
         src="/images/about/subhashpalekar.svg"
         alt="Subhash Palekar"
-        width={240}
-        height={240}
+        width={362}
+        height={362}
         className="rounded-full shadow-lg"
       />
-      <p className="mt-4 text-lg font-semibold">Subhash Palekar</p>
+      <p className="mt-4 text-lg font-semibold"
+                style={{
+                  fontFamily:"Jost",
+                  fontSize: "28px",
+                  color:"#404040"
+                }}
+      >Subhash Palekar</p>
     </div>
             {/* Tree Image */}
            {/*  <div className="flex flex-col w-0 md:w-350 items-center ml-20 -mt-10">
@@ -392,7 +412,13 @@ const AboutSection: React.FC = () => {
               color: "#404040",
             }}
           >
-            <span className="text-4xl md:text-5xl font-bold z-2">Vision &  Mission </span>
+            <span className="text-4xl md:text-5xl font-bold z-2"
+              style={{
+                  fontFamily:"Jost",
+                  fontSize: "47px",
+                  color:"#404040"
+                }}
+            >Vision &  Mission </span>
 
                {/* <Image
                 src="/images/about/leave.svg"
@@ -419,13 +445,13 @@ const AboutSection: React.FC = () => {
     {/* ---------- OUR VISION (Image Left / Text Right) ---------- */}
     <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-8 py-6">
       {/* Image (left on md+) */}
-      <div className="w-full md:w-2/5 flex justify-center md:justify-start">
+      <div className="w-full md:w-2/5 flex justify-center ">
         <Image
           src="/images/about/dewdrop.svg"
           alt="Dewdrop on leaf"
-          width={400}
+          width={400} 
           height={400}
-          className="rounded-lg shadow-sm object-contain w-40 sm:w-48 md:w-56 lg:w-64 max-w-[260px] h-auto"
+          className="rounded-lg shadow-sm object-contain w-40 sm:w-48 md:w-56 lg:w-64 max-w-[315px] h-auto"
         />
       </div>
 
@@ -433,14 +459,19 @@ const AboutSection: React.FC = () => {
       <div className="w-full md:w-3/5">
         <h3
           className="text-lg sm:text-xl md:text-2xl font-semibold leading-tight"
-          style={{ fontFamily: "Jost, sans-serif", fontWeight: 600 }}
+          style={{ fontFamily: "Jost" !, 
+              fontSize: "30px",
+                  color:"#727272",
+                  fontWeight: 500 }}
         >
           OUR VISION
         </h3>
 
         <p
           className="mt-2 text-sm sm:text-base md:text-lg"
-          style={{ fontFamily: "Josefin Sans, sans-serif", fontWeight: 400 }}
+          style={{ fontFamily: "Josefin Sans ",
+            fontSize: "18px",
+                  color:"#4a4a4a", fontWeight: 400 }}
         >
           To create India’s most inspiring model of natural living where urban
           families reconnect with nature, live consciously, and thrive in
@@ -458,15 +489,19 @@ const AboutSection: React.FC = () => {
       <div className="w-full md:w-3/5">
         <h3
           className="text-lg sm:text-xl md:text-2xl font-semibold leading-tight"
-          style={{ fontFamily: "Jost, sans-serif", fontWeight: 600 }}
+           style={{ fontFamily: "Jost" !, 
+              fontSize: "30px",
+                  color:"#727272",
+                  fontWeight: 500 }}
         >
           OUR MISSION
         </h3>
 
         <p
           className="mt-2 text-sm sm:text-base md:text-lg"
-          style={{ fontFamily: "Josefin Sans, sans-serif", fontWeight: 400 }}
-        >
+ style={{ fontFamily: "Josefin Sans ",
+            fontSize: "18px",
+                  color:"#4a4a4a", fontWeight: 400 }}        >
           To build self-sustaining farming communities rooted in natural
           practices, mindful living, and collective well-being while preserving
           the environment, promoting local ecosystems, and offering a healthier
@@ -474,10 +509,10 @@ const AboutSection: React.FC = () => {
         </p>
 
         {/* Button (compact, aligns naturally under text) */}
-        <div className="mt-4">
+        <div className="mt-5">
           <button
             onClick={() => setModalOpen(true)}
-            className="inline-block border border-green-600 text-green-600 px-4 py-2 rounded-md text-sm transition-colors duration-200 hover:bg-green-600 hover:text-white"
+            className="inline-block border border-green-600 text-green-600 px-4 py-2 rounded-md text-sm transition-colors duration-200 hover:bg-green-600 hover:text-white cursor-pointer"
           >
             Download Brochure
           </button>
@@ -485,13 +520,13 @@ const AboutSection: React.FC = () => {
       </div>
 
       {/* Image (right on md+) */}
-      <div className="w-full md:w-2/5 flex justify-center md:justify-end">
+      <div className="w-full md:w-2/5 flex justify-center">
         <Image
           src="/images/about/sprout.svg"
           alt="Sprout growing"
           width={360}
           height={360}
-          className="rounded-lg shadow-sm object-contain w-36 sm:w-44 md:w-56 lg:w-64 max-w-[240px] h-auto"
+          className="rounded-lg shadow-sm object-contain w-36 sm:w-44 md:w-56 lg:w-64 max-w-[315px] h-auto"
         />
       </div>
     </div>
@@ -507,7 +542,7 @@ const AboutSection: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="relative px-6 sm:px-12 md:px-16 lg:px-24">
+      <section className=" bg-[#FFFDF2] relative px-6 sm:px-12 md:px-16 lg:px-24">
         {/* Background Image in Corner */}
           {/*  <div className="absolute -top-68 md:-right-32 lg:-right-15 w-0 md:w-[400px] h-[400px] lg:w-[400px] lg:h-[500px] z-[-1]">
           <Image
@@ -528,15 +563,22 @@ const AboutSection: React.FC = () => {
             <h2
               ref={About}
               className="text-3xl md:text-4xl font-bold text-gray-900 -mt-10 md:mt-50"
-              style={{ fontFamily: "Jost", fontWeight: 600 }}
-            >
+              style={{ fontFamily: "Jost", 
+               fontSize: "47px",
+              //  lineHeight:"89px",
+               color:"#404040", 
+               fontWeight: 600 }}
+               >
               About Planet
             </h2>
             <h2
               ref={About}
-              className="relative text-3xl md:text-4xl font-bold text-gray-900 ml-10 mt-2"
-              style={{ fontFamily: "Jost", fontWeight: 600 }}
-            >
+              className="relative text-3xl md:text-4xl font-bold text-gray-900 ml-30 mt-2"
+ style={{ fontFamily: "Jost", 
+               fontSize: "47px",
+              //  lineHeight:"89px",
+               color:"#404040", 
+               fontWeight: 600 }}            >
               Green Infra
                 {/* <Image
                 src="/images/about/leave.svg"
@@ -547,11 +589,15 @@ const AboutSection: React.FC = () => {
               /> */}
             </h2>
             <p
-              className="text-gray-700 text-lg mt-8 md:mt-15"
+              className="text-gray-700 text-lg mt-6 md:mt-10"
               style={{
                 fontFamily: "Josefin Sans",
                 fontWeight: 400,
-                fontSize: "16px",
+                fontSize: "18px",
+                 color:"#4a4a4a", 
+                 lineHeight:"28px"
+
+
               }}
             >
               Planet Green is built on an idea that reconnecting people with
@@ -584,13 +630,13 @@ const AboutSection: React.FC = () => {
           {/* Right Side - Image (FIXED) */}
           <div
             ref={About}
-            className="relative md:w-screen h-[400px] md:h-[600px] lg:h-[700px] rounded-lg shadow-lg overflow-hidden md:mt-42 mt-0"
+            className="relative md:w-screen  lg:h-[100px] rounded-lg shadow-lg overflow-hidden md:mt-42 mt-0"
           >
             <Image
               src="/images/about/farm-field.svg"
               alt="Farm Field"
-              width={982}
-              height={500}
+              width={700}
+              height={700}
               className="w-full  h-full object-cover rounded-lg"
             />
           </div>

@@ -31,7 +31,7 @@ const ProjectHighlight: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[90vh]">
+    <div className="relative w-full h-[684px]">
       {/* Background Image */}
       <Image
         src="/images/highlights/highlights.svg"
@@ -46,7 +46,15 @@ const ProjectHighlight: React.FC = () => {
         ref={headingRef}
         className="absolute left-6 sm:left-8 md:left-16 top-1/2 -translate-y-1/2 text-white text-24"
       >
-        <h2 className="text-3xl md:text-5xl font-bold text-24">Project Highlights</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-24"
+        style={{
+                  // fontFamily: "Sofia Pro"!,
+                  fontSize:"50px" !,
+                  fontWeight: 600,
+                  lineHeight:"109px",
+                  color:"#fff"
+                }}
+        >Project Highlights</h2>
       </div>
     </div>
   );

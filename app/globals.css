@@ -42,8 +42,8 @@ body {
 
   @media (width >= 80rem) {
     .xl\:text-\[80px\] {
-        font-size: 80px;
-        margin-top: 0px;
+        font-size: 50px;
+        margin-top: 50px;
     }}
 
     @media (width >= 80rem) {
@@ -55,23 +55,104 @@ body {
 @media (width >= 48rem) {
     .md\:pl-8 {
         padding-left: calc(var(--spacing) * 0);
-        margin-top: -70pxpx;
+        margin-top: -150px;
+    }
+}
+@media (width >= 64rem) {
+    .lg\:pl-0 {
+        padding-left: calc(var(--spacing) * 0);
+        margin-top: -80px;
     }
 }
 @media (width >= 80rem) {
     .xl\:py-24 {
         padding-block: calc(var(--spacing) * 24);
+        margin-top: -90px;
     }
 }
 @media (width >= 64rem) {
     .lg\:gap-0 {
         gap: calc(var(--spacing) * 0);
-        margin-top: -50px;
+        margin-top: -80px;
+    }
+}
+@media (width >= 64rem) {
+    .lg\:mt-\[6\%\] {
+        margin-top: 0%;
+    }
+}
+@media (width >= 48rem) {
+    .md\:w-1\/1 {
+        width: 65%;
+    }
+}
+@media (width >= 64rem) {
+    .lg\:w-64 {
+        width: calc(var(--spacing) * 100);
+    }
+}
+@media (width >= 48rem) {
+    .md\:w-3\/5 {
+        width: 60%;
+        margin: 30px;
+    }
+}
+@media (width >= 64rem) {
+    .lg\:h-\[100px\] {
+        height: 634px;
+        width: 700px;
+    }
+}
+@media (width >= 48rem) {
+    .md\:py-16 {
+        padding-block: calc(var(--spacing) * 26);
+    }
+}
+.px-6 {
+    padding-inline: calc(var(--spacing) * 22);
+}
+@media (width >= 48rem) {
+    .md\:left-16 {
+        left: calc(var(--spacing) *25);
+    }
+}
+@media (width >= 48rem) {
+    .md\:py-12 {
+        padding: calc(var(--spacing) * 25);
+    }
+}
+@media (width >= 48rem) {
+    .md\:-mt-20 {
+        margin-top: calc(var(--spacing) * -32);
     }
 }
 @media (width >= 80rem) {
-    .xl\:px-10 {
-        padding-inline: calc(var(--spacing) * 10);
-        margin: 50px;
+    .xl\:pl-20 {
+        padding-left: calc(var(--spacing) * 22);
+        padding-top: calc(var(--spacing) * 20);
+    }
+}
+@media (width >= 48rem) {
+    .md\:h-64 {
+        height: calc(var(--spacing) * 75);
+        width: calc(var(--spacing) * 82);
+    }
+}
+.mt-4 {
+    margin-top: calc(var(--spacing) * 0);
+}
+@media (width >= 48rem) {
+    .md\:w-\[150px\] {
+        width: 100px;
+    }
+}
+@media (width >= 64rem) {
+    .lg\:mt-9 {
+        margin-top: calc(var(--spacing) * -25);
+    }
+}
+@media (width >= 48rem) {
+    .md\:mt-0 {
+        margin-top: calc(var(--spacing) * -25);
     }
 }

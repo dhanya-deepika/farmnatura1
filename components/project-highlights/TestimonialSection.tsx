@@ -103,13 +103,13 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ bgColor }) => {
               style={{ fontFamily: "Jost" }}
             >
               &ldquo;I couldn&apos;t have asked for a better place to call home
-              than FARM NATURA Urban One. From the moment I
+              than FARM NATURA Urban One. From the moment I 
               stepped into this vibrant community, I knew I had made the right
               choice. Everything here exceeded all my expectations,
               offering a perfect blend of comfort and elegance. What truly sets
               Farm Natura apart is the
                sense of belonging it provides &ndash; the friendly
-              neighbours, the top-notch amenities, and the beautifully
+              neighbours, the top-notch amenities, and the beautifully 
               landscaped surroundings. Living here has been an incredible
               experience, and I can&apos;t imagine being
               anywhere else.&rdquo;

@@ -104,7 +104,7 @@ const KeyHighlights = () => {
       <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-7">
         <div className="flex flex-col lg:flex-row gap-8 xl:gap-12 2xl:gap-16">
           {/* Left Column - Highlights List */}
-          <div className="w-full lg:w-1/3 xl:w-2/5 pl-4 sm:pl-6 md:pl-8 lg:pl-0">
+          <div className="w-full lg:w-1/3 xl:w-2/5 pl-4 sm:pl-6 md:pl-7 lg:pl-0">
             <div
               className="flex items-center mb-6 md:mb-8 lg:mb-10"
               id="highlights-header"
@@ -185,7 +185,7 @@ const KeyHighlights = () => {
                     variant="outline"
                     onClick={() => setModalOpen(true)}
                   >
-                    <span className="text-primary-green text-sm sm:text-base">
+                    <span className="text-primary-green text-sm sm:text-base cursor-pointer">
                       Download Brochure
                     </span>
                   </Button>

@@ -13,7 +13,7 @@ const features = [
     description: "Benefits of toxin-free soil for growing your own food.",
     image: "/images/highlights/chemical.svg",
     width: 795,
-    height: 290,
+    height: 401,
   },
   {
     title: "Sustainable Practices",
@@ -21,14 +21,14 @@ const features = [
       "Highlight composting, rainwater harvesting, and biodiversity efforts.",
     image: "/images/highlights/practies.svg",
     width: 795,
-    height: 385,
+    height: 532,
   },
   {
     title: "A Healthier Lifestyle",
     description: "Benefits of living in a natural, pollution-free environment.",
     image: "/images/highlights/lifestyle.svg",
-    width: 795,
-    height: 386,
+    width: 792,
+    height: 532,
   },
   {
     title: "Community Living",
@@ -36,7 +36,7 @@ const features = [
       "Focus on shared values, events and interactive spaces for residents.",
     image: "/images/highlights/living.svg",
     width: 795,
-    height: 290,
+    height: 401,
   },
 ];
 
@@ -154,11 +154,11 @@ export default function WhyFarmNatura() {
   ];
 
   return (
-    <section ref={containerRef} className="bg-[#F5F2E6] py-8 md:py-12 px-4 md:px-12">
+    <section ref={containerRef} className="bg-[#F5F2E6] py-8 md:py-10 px-4 md:px-12">
       <h2
         ref={headingRef}
         className="text-3xl md:text-4xl text-center md:text-left font-bold text-[#404040] mb-8"
-        style={{ fontFamily: "Jost", fontWeight: 600 }}
+        style={{ fontFamily: "Jost",fontSize:"47px", lineHeight:"89px",fontWeight: 600 }}
       >
         Why Farm Natura?
       </h2>
@@ -187,9 +187,11 @@ export default function WhyFarmNatura() {
                 <h3
                   className="text-lg font-bold"
                   style={{
-                    fontFamily: "Sofia Pro",
+                    color: feature.title === "A Healthier Lifestyle" ? "#282828" : "#FFF",
+                    fontSize: "20px",
+                    fontStyle: "normal",
                     fontWeight: 600,
-                    fontSize: "18px",
+                    lineHeight: "123.2%", // ~29.6px
                   }}
                 >
                   {feature.title}
@@ -197,9 +199,11 @@ export default function WhyFarmNatura() {
                 <p
                   className="text-sm"
                   style={{
-                    fontFamily: "Sofia Pro",
+                    color: feature.title === "A Healthier Lifestyle" ? "#282828" : "#FFF",
+                    fontSize: "16px",
+                    fontStyle: "normal",
                     fontWeight: 400,
-                    fontSize: "14px",
+                    lineHeight: "123.2%",
                   }}
                 >
                   {feature.description}
