@@ -332,7 +332,7 @@ const AboutSection: React.FC = () => {
                 />
               </div>
               <p
-                className="mt-4 text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-semibold text-[#404040]"
+                className="mt-6 text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-semibold text-[#404040]"
                 style={{ fontFamily: "Jost", fontWeight: 500 }}
               >
                 Vinay Ram
@@ -346,11 +346,11 @@ const AboutSection: React.FC = () => {
                   src="/images/about/subhashpalekar.svg"
                   alt="Subhash Palekar"
                   fill
-                  className="rounded-full shadow-lg object-cover"
+                  className="rounded-full shadow-lg object-cover lg:mt-"
                 />
               </div>
               <p
-                className="mt-4 text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-semibold text-[#404040]"
+                className="mt-6 text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-semibold text-[#404040]"
                 style={{ fontFamily: "Jost", fontWeight: 500 }}
               >
                 Subhash Palekar
@@ -365,7 +365,7 @@ const AboutSection: React.FC = () => {
        <div ref={vision} className="container mx-auto px-2 md:px-12 lg:px-16">
 
           <h2
-            className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] text-center mb-4 md:mb-8"
+            className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] text-center mb-4 md:mb-8 lg:mt-25"
             style={{ fontFamily: "Jost", fontWeight: 600 }}
           >
             Vision & Mission
@@ -373,10 +373,10 @@ const AboutSection: React.FC = () => {
 
           <div className="max-w-5xl mx-auto space-y-4 md:space-y-8">
             {/* Our Vision */}
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-0">
               {/* Image Left */}
-              <div className="w-full md:w-2/5">
-                <div className="relative w-full max-w-[280px] h-[280px] mx-auto md:mx-0">
+<div className="w-full md:w-[38%] lg:w-[36%] flex justify-start md:justify-end md:mr-6 lg:mr-5">
+                <div className="relative w-[240px] md:w-[260px] h-[260px] md:h-[260px]">
                   <Image
                     src="/images/about/dewdrop.svg"
                     alt="Dewdrop on leaf"
@@ -385,6 +385,7 @@ const AboutSection: React.FC = () => {
                   />
                 </div>
               </div>
+
 
               {/* Text Right */}
               <div className="w-full md:w-3/5">
@@ -405,10 +406,10 @@ const AboutSection: React.FC = () => {
             </div>
 
             {/* Our Mission */}
-            <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-4 md:gap-6">
+           <div className="flex flex-col md:flex-row-reverse items-center md:items-start  md:gap-1">
               {/* Image Right */}
               <div className="w-full md:w-2/5">
-                <div className="relative w-full max-w-[280px] h-[280px] mx-auto md:mx-0 md:ml-auto">
+<div className="relative w-full max-w-[280px] h-[280px] mx-auto md:mx-0 md:ml-4 lg:ml-6">
                   <Image
                     src="/images/about/sprout.svg"
                     alt="Sprout growing"

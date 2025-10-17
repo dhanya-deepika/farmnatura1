@@ -84,7 +84,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-[rgba(0,0,0,0.5)] backdrop-blur-sm z-50 px-4">
       <div
-        className="relative flex flex-col md:flex-row items-center bg-white p-4 md:p-6 rounded-lg shadow-xl w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto max-h-[90vh] overflow-y-auto transition-all duration-300 ease-out will-change-transform,opacity"
+        className="relative flex flex-col md:flex-row items-center md:items-start bg-white p-6 md:p-8 rounded-lg shadow-xl w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto max-h-[90vh] overflow-y-auto"
       >
         {/* Close Button */}
         <button
@@ -95,7 +95,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         </button>
 
         {/* Image Section */}
-        <div className="w-full md:w-1/2 flex justify-center">
+        <div className="w-full md:w-1/2 flex justify-center mb-4 md:mb-0">
           <Image
             src="/images/form.svg"
             alt="Contact Form Image"
@@ -107,24 +107,24 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Form Section */}
-        <div className="w-full md:w-1/2 mt-4 md:mt-0 md:pl-6">
-          <h2 className="text-lg font-bold text-green-800 mb-1 text-center md:text-left">
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left px-2 md:px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-1">
             Book
           </h2>
-          <h3 className="text-xl font-semibold text-green-800 mb-2 text-center md:text-left">
+          <h3 className="text-xl md:text-2xl font-semibold text-green-800 mb-2">
             A site visit
           </h3>
-          <h2 className="text-lg text-green-800 mt-4 text-center md:text-left">
+          <h2 className="text-lg md:text-xl text-green-800 mt-2 mb-4">
             Send Us A Message
           </h2>
 
           {success && (
-            <p className="text-green-600 text-sm mt-2 text-center md:text-left">
+            <p className="text-green-600 text-sm md:text-base mb-2">
               Your message has been sent successfully!
             </p>
           )}
 
-          <form className="mt-3 space-y-3 flex flex-col items-center" onSubmit={handleSubmit}>
+          <form className="w-full space-y-3" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
@@ -152,7 +152,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
               required
             />
-
             <select
               name="interestedIn"
               value={formData.interestedIn}
@@ -165,7 +164,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               <option value="Residential Plots">Farm House</option>
               <option value="Weekend Destination">Weekend Destination</option>
             </select>
-
             <select
               name="PlotSize"
               value={formData.PlotSize}
@@ -182,16 +180,16 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
             <button
               type="submit"
-              className="w-full max-w-md flex items-center justify-center gap-2 bg-yellow-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-yellow-600 transition"
+              className="w-full bg-yellow-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-yellow-600 transition"
               disabled={loading}
             >
               {loading ? "Submitting..." : "Submit →"}
             </button>
           </form>
-
         </div>
       </div>
     </div>
+
 
 
   );
