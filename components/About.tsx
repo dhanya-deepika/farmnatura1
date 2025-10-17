@@ -171,100 +171,121 @@ const AboutSection: React.FC = () => {
         </div>
       </section>
 
-      {/* Evolution Natural Farming Section */}
-      <section className="bg-[#FFFDF2] py-[5px] md:py-12 lg:py-14">
-        <div ref={evolutionRef} className="flex flex-col lg:flex-row items-center lg:items-start">
-          {/* Left - Text */}
-          <div className="w-full lg:w-1/2 px-[5px] md:px-12 lg:px-16 xl:px-20">
-            <h2
-              className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] leading-tight text-left"
-              style={{ fontFamily: "Jost", fontWeight: 600 }}
-            >
-              Evolution Natural
-              <br />
-              Farming
-            </h2>
-            <p
-              className="mt-4 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed text-[#282828] text-left"
-              style={{ fontFamily: "Sofia Pro, sans-serif", fontWeight: 400, lineHeight: "1.7" }}
-            >
-              Farm Natura was started with a mission to reconnect people with nature through natural
-              farming. Our vision is to create chemical-free, self-sufficient communities that harmonize
-              human life with nature&apos;s rhythms. We believe in transforming farmland into living
-              spaces that nourish both body and soul. By combining traditional farming wisdom with modern
-              ecological practices, we aim to build a blueprint for holistic, sustainable living. Farm
-              Natura is more than a project - it&apos;s a movement towards a healthier, more connected way
-              of life.
-            </p>
-          </div>
+ {/* Evolution Natural Farming Section */}
+<section className="bg-[#FFFDF2] py-12 lg:py-10 overflow-hidden">
+  <div className="flex flex-col lg:flex-row items-center justify-between w-full">
+    {/* Left - Text */}
+    <div className="w-full lg:w-1/2 px-6 md:px-10 lg:px-16 xl:px-20 flex flex-col justify-center">
+      <h2
+        className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] leading-tight"
+        style={{ fontFamily: "Jost", fontWeight: 600 }}
+      >
+        Evolution Natural
+        <br />
+        Farming
+      </h2>
+      <p
+        className="mt-5 text-[15px] md:text-[16px] leading-relaxed text-[#282828]"
+        style={{
+          fontFamily: "Sofia Pro, sans-serif",
+          fontWeight: 400,
+          lineHeight: "1.7",
+        }}
+      >
+        Farm Natura was started with a mission to reconnect people with nature
+        through natural farming. Our vision is to create chemical-free,
+        self-sufficient communities that harmonize human life with nature&apos;s
+        rhythms. We believe in transforming farmland into living spaces that
+        nourish both body and soul. By combining traditional farming wisdom with
+        modern ecological practices, we aim to build a blueprint for holistic,
+        sustainable living. Farm Natura is more than a project — it&apos;s a
+        movement towards a healthier, more connected way of life.
+      </p>
+    </div>
 
-          {/* Right - Image */}
-          <div className="w-full lg:w-1/2 mt-[5px] lg:mt-0 px-[5px] md:px-0 lg:pr-16 xl:pr-20">
-            <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[500px]">
-              <Image
-                src="/images/about/cow.png"
-                alt="Cow"
-                fill
-                className="object-cover md:rounded-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Right - Image */}
+    <div className="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[520px] flex justify-center lg:justify-end">
+      <div className="relative w-full h-full">
+        <Image
+          src="/images/about/cow.png"
+          alt="Cow"
+          fill
+          className="object-contain object-center"
+          priority
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
-      {/* Research & Development Section */}
-      <section className="bg-[#FFFDF2] py-[5px] md:py-12 lg:py-14">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start">
-          {/* Left - Image (Full Left) */}
-          <div className="w-full lg:w-1/2 lg:pl-0">
-            <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px]">
-              <Image
-                src="/images/about/image76.PNG"
-                alt="Pottery"
-                fill
-                className="object-cover object-left"
-              />
-            </div>
-          </div>
+{/* Research & Development Section */}
+<section className="bg-[#FFFDF2] py-12 lg:py-16 overflow-hidden">
+  <div className="flex flex-col lg:flex-row items-center justify-between w-full">
+    {/* Left - Image Full Edge */}
+    <div className="w-full lg:w-1/2 h-[320px] sm:h-[400px] md:h-[450px] lg:h-[520px]">
+      <div className="relative w-full h-full">
+        <Image
+          src="/images/about/image76.PNG"
+          alt="Pottery"
+          fill
+          className="object-contain object-left"
+          priority
+        />
+      </div>
+    </div>
 
-          {/* Right - Text */}
-          <div ref={researchRef} className="w-full lg:w-1/2 px-[5px] md:px-12 lg:px-16 xl:px-20 mt-[5px] lg:mt-0">
-            <h2
-              className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] leading-tight text-left"
-              style={{ fontFamily: "Jost", fontWeight: 600 }}
-            >
-              Research &<br />
-              Development
-            </h2>
-            <p
-              className="mt-4 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed text-[#282828] text-left"
-              style={{ fontFamily: "Sofia Pro, sans-serif", fontWeight: 400, lineHeight: "1.7" }}
-            >
-              Farm Natura offers a community of like-minded families from Hyderabad, where lifestyle is
-              built basing on Natural Farming with an intent to focus on Health & Happiness.
-              <br />
-              <br />
-              Respect Mother Nature And Land. &quot;We Are Part Of Nature; Therefore, We Must Coexist With
-              The Other Creatures That Live Among Us.&quot;
-              <br />
-              <br />
-              Our passion is to promote the &ldquo;Agri&rdquo; based Culture and bringing back the
-              Ecological balanced Lifestyle with Health and Happiness. We respect the Mother Nature and
-              nourish the land by restoring its original fertility back into its Natural State for the
-              generations to come.
-            </p>
-            <button
-              className="mt-6 inline-block border-2 border-green-700 text-green-700 px-5 py-2 rounded-lg text-[14px] font-semibold transition duration-300 hover:bg-green-700 hover:text-white cursor-pointer"
-              onClick={() => setModalOpen(true)}
-            >
-              Download Brochure
-            </button>
-          </div>
-        </div>
-      </section>
+    {/* Right - Text */}
+    <div
+      ref={researchRef}
+      className="w-full lg:w-1/2 px-6 sm:px-10 md:px-14 lg:px-20 flex flex-col justify-center"
+    >
+      <h2
+        className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] leading-tight"
+        style={{ fontFamily: "Jost", fontWeight: 600 }}
+      >
+        Research &<br />
+        Development
+      </h2>
+      <p
+        className="mt-5 text-[15px] md:text-[16px] leading-relaxed text-[#282828]"
+        style={{
+          fontFamily: "Sofia Pro, sans-serif",
+          fontWeight: 400,
+          lineHeight: "1.7",
+        }}
+      >
+        Farm Natura offers a community of like-minded families from Hyderabad,
+        where lifestyle is built basing on Natural Farming with an intent to
+        focus on Health & Happiness.
+        <br />
+        <br />
+        Respect Mother Nature And Land. &quot;We Are Part Of Nature; Therefore,
+        We Must Coexist With The Other Creatures That Live Among Us.&quot;
+        <br />
+        <br />
+        Our passion is to promote the &ldquo;Agri&rdquo; based Culture and bring
+        back the Ecological balanced Lifestyle with Health and Happiness. We
+        respect Mother Nature and nourish the land by restoring its original
+        fertility back into its Natural State for the generations to come.
+      </p>
+<button
+  className="mt-6 w-max border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg text-[14px] font-semibold transition duration-300 hover:bg-green-700 hover:text-white cursor-pointer"
+  onClick={() => setModalOpen(true)}
+>
+  Download Brochure
+</button>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
 
       {/* Inspired By Section */}
-      <section className="bg-[#FFFDF2] py-[5px] md:py-12 lg:py-14">
+      <section className="bg-[#FFFDF2] py-[5px] md:py-0 lg:py-14 ">
         <div ref={inspiredBy} className="container mx-auto px-[5px] md:px-12 lg:px-16 xl:px-20">
           <h2
             className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] text-center mb-4 md:mb-10"
@@ -315,7 +336,7 @@ const AboutSection: React.FC = () => {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="bg-[#FFFDF2] py-[5px] md:py-12 lg:py-14">
+      <section className="bg-[#FFFDF2] py-[5px] md:py-10 lg:py-14">
         <div ref={vision} className="container mx-auto px-[5px] md:px-12 lg:px-16 xl:px-20">
           <h2
             className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[47px] font-bold text-[#404040] text-center mb-4 md:mb-8"
@@ -400,7 +421,7 @@ const AboutSection: React.FC = () => {
       </section>
 
       {/* About Planet Green Infra Section */}
-      <section className="bg-[#FFFDF2] py-[5px] md:py-12 lg:py-14">
+      <section className="bg-[#FFFDF2] py-[5px] md:py-0 lg:py-14">
         <div ref={About} className="flex flex-col lg:flex-row items-center lg:items-start">
           {/* Left - Text */}
           <div className="w-full lg:w-1/2 px-[5px] md:px-12 lg:px-16 xl:px-20">
